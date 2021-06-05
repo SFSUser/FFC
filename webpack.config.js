@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: [
-    path.resolve(__dirname, 'src', 'index.tsx')
+    path.resolve(__dirname, 'src', 'tsc/index.tsx')
   ],
   output: {
     filename: 'bundle.js',
@@ -34,18 +34,9 @@ module.exports = {
       {
         test: /\.s(a|c)ss$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/dist/',
-            },
-          },
-          {
-            loader: 'css-loader',
-            options: { modules: true }
-          },
-          'postcss-loader',
-          'sass-loader'
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
         ]
       },
       {
@@ -60,8 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+      filename: './[name].css',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
