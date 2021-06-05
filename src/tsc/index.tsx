@@ -15,10 +15,10 @@ const App = () => {
       <Router history={history}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Inico</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">Acerca</Link>
           </li>
           <li>
             <Link to="/dashboard">Dashboard</Link>
