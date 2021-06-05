@@ -12,6 +12,7 @@ console.log(styles);
 const App = () => {
   return (
     <div>
+      <hr />
       <Router history={history}>
         <ul>
           <li>
@@ -24,7 +25,6 @@ const App = () => {
             <Link to="/dashboard">Dashboard</Link>
           </li>
         </ul>
-        <hr />
         <Switch>
           <Route exact path="/">
             <div>
