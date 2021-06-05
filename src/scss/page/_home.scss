@@ -1,0 +1,48 @@
+body {
+    background-image: url($body-bg-image);
+    background-blend-mode: overlay;
+    background-color:gainsboro;
+    height: 100%;
+}
+.fixer {
+    width: $page-width;
+    margin: auto;
+}
+
+.ffc-title {
+    text-align: center;
+    color: #5b3715;
+    text-transform: capitalize;
+}
+
+.ffc-logo-medium {
+    height: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.category {
+    height: 300px;
+    background-size: cover;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+
+    webkit-filter: blur(4px); 
+    filter: blur(4px);
+
+    h4 {
+        font-size: 50px;
+    }
+
+    &:hover {
+        filter: none;
+    }
+
+    @each $image in $home_images {
+        &__#{$image} {
+            background-image: url('./../../assets/img/art/#{$image}.jpg');
+        }
+    }
+}
+

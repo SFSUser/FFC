@@ -1,3 +1,12 @@
+/**
+* MAIN SASS FILE
+*/
 body {
-  background-color: gainsboro; }
+  background-color: gainsboro;
+  background-image: url(cf05b6b453d32587cc4705b2056dca52.jpg);
+  background-blend-mode: overlay; }
+
+.fixer {
+  width: 800px;
+  margin: auto; }
 

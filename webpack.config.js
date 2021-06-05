@@ -14,12 +14,12 @@ module.exports = {
   },
   mode: "development",
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx']
+    extensions: ['.js', '.ts', '.jsx', '.tsx']
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?x?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
@@ -38,6 +38,10 @@ module.exports = {
           "css-loader",
           "sass-loader"
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

@@ -4,8 +4,9 @@
   "description": "Sitio para la familia franciscana de colombia",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --watch",
     "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack serve --open"
   },
   "keywords": [
     "FFC"

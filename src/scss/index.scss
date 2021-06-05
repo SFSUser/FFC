@@ -1,3 +1,6 @@
-body{
-    background-color: gainsboro;
-}
+/**
+* MAIN SASS FILE
+*/
+
+@import './variable/variables';
+@import './page/home';
