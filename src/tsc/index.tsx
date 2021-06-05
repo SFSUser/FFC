@@ -13,34 +13,32 @@ const App = () => {
   return (
     <div>
       <Router history={history}>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-          </ul>
-          <hr />
-          <Switch>
-            <Route exact path="/">
-              <div>
-                 <h1>Familia Franciscana de colombia</h1>
-                  <img src={ffc} />
-              </div>
-            </Route>
-            <Route path="/about">
-              <div></div>
-            </Route>
-            <Route path="/dashboard">
-              <div></div>
-            </Route>
-          </Switch>
-        </div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
+        <hr />
+        <Switch>
+          <Route exact path="/">
+            <div>
+                <h1>Familia Franciscana de colombia</h1>
+                <img src={ffc} />
+            </div>
+          </Route>
+          <Route path="/about">
+            <div></div>
+          </Route>
+          <Route path="/dashboard">
+            <div></div>
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
