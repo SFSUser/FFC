@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import styles from './../scss/index.scss';
 import ffc from './../../assets/img/ffc.png';
 import { Route, Router, Switch } from 'react-router';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
 
 const history = createBrowserHistory();
 console.log(styles);
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <hr />
-      <Router history={history}>
+      <HashRouter>
         <ul>
           <li>
             <Link to="/">Inico</Link>
@@ -39,7 +39,7 @@ const App = () => {
             <div></div>
           </Route>
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
