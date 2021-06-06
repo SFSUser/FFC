@@ -4,6 +4,7 @@ import { HashRouter, Link } from 'react-router-dom';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import Footer from './section/Footer';
 import HomePage from './HomePage';
+import TestPage from './TestPage';
 
 export default class BasePage extends Component {
     render (){
@@ -14,8 +15,8 @@ export default class BasePage extends Component {
                         <Navbar bg="light" variant="light">
                         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                         <Nav className="mr-auto">
-                            <Link className="nav-link" to="/">Home</Link>
-                            <Link className="nav-link" to="/features">Features</Link>
+                            <Link className="nav-link" to="/">Hogat</Link>
+                            <Link className="nav-link" to="/about">Test</Link>
                             <Link className="nav-link" to="/pricing">Pricing</Link>
                         </Nav>
                         <Form inline>
@@ -28,7 +29,7 @@ export default class BasePage extends Component {
                             <HomePage/>
                         </Route>
                         <Route path="/about">
-                            <div></div>
+                            <TestPage />
                         </Route>
                         <Route path="/dashboard">
                             <div></div>

@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
 import CategoryBoxProp from 'tsc/entity/nav/props/CategoryBoxProp';
+import $ from "jquery";
 
 export default class CategoryBox extends Component<CategoryBoxProp> {
+    private image: any = null;
     constructor(props: any){
         super(props);
+        this.image = React.createRef();
+    }
+
+    componentDidMount(){
+        let me = this;
+        window.addEventListener("scroll", function () {
+            let parallax =  me.image.current;
+            let scrollPosition = window.pageYOffset;
+            $(parallax).stop().animate({
+                backgroundPositionY: (scrollPosition * 0.1) + "%"
+            });
+        });
     }
 
     render() {
@@ -16,7 +30,7 @@ export default class CategoryBox extends Component<CategoryBoxProp> {
                         return <li key={i}>{s.name}</li>;
                     })}
                 </ul>
-                <div className={`image image__${me.props.data.image}`}></div>
+                <div ref={me.image} className={`image image__${me.props.data.image}`}></div>
             </div>
         );
     }
