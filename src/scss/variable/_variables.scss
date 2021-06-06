@@ -2,3 +2,10 @@ $page-width: 900px;
 $color-brown: #5b3715;
 $body-bg-image: '../../assets/img/fondo_tela.jpg';
 $home_images: 'clara', 'francisco';
+
+/* Helper Function */
+$base-parallax-perspective: 8px;
+
+@function parallax-scale-factor($z-distance) {
+    @return ($base-parallax-perspective - $z-distance) / $base-parallax-perspective;
+}

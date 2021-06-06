@@ -73,6 +73,8 @@ body {
         filter: none;
     }
 
+    perspective: $base-parallax-perspective;
+    perspective-origin: 0%;
 }
 
 .image {
