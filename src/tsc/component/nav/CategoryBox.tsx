@@ -16,7 +16,7 @@ export default class CategoryBox extends Component<CategoryBoxProp> {
                         return <li key={i}>{s.name}</li>;
                     })}
                 </ul>
-                <div className={`category__image category__image__${me.props.data.image}`}></div>
+                <div className={`image image__${me.props.data.image}`}></div>
             </div>
         );
     }

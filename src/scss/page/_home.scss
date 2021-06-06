@@ -7,6 +7,8 @@ body {
 .fixer {
     width: $page-width;
     margin: auto;
+    background-color: #ffffff6b;
+    padding: 0 30px 0 30px;
 }
 
 .ffc-paja {
@@ -18,7 +20,7 @@ body {
 
 .ffc-title {
     text-align: center;
-    color: #5b3715;
+    color: $color-brown;
     text-transform: capitalize;
 }
 
@@ -62,7 +64,7 @@ body {
             background-color: #ffffff47;
             &:hover {
                 background-color: white;
-                color: #5b3715;
+                color: $color-brown;
             }
         }
     }
@@ -71,24 +73,44 @@ body {
         filter: none;
     }
 
-    &__image {
-        left: 0;
-        right: 0;
-        z-index: 1;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        filter: blur(5px);
+}
 
-        &:hover {
-            filter: none;
+.image {
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    filter: blur(5px);
+
+    &:hover {
+        filter: none;
+        border-radius: 15px;
+    }
+
+    @each $image in $home_images {
+        &__#{$image} {
+            background-image: url('./../../assets/img/art/#{$image}.jpg');
         }
+    }
+}
 
-        @each $image in $home_images {
-            &__#{$image} {
-                background-image: url('./../../assets/img/art/#{$image}.jpg');
-            }
+.www-footer {
+    display: block;
+
+    h4 {
+        text-align: center;
+        color: $color-brown;
+    }
+
+    .social {
+        float: right;
+        svg {
+            display: inline-block;
+            margin-right: 5px;
+            margin-left: 5px;
         }
     }
 }

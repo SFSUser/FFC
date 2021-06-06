@@ -1,10 +1,8 @@
 import { Component } from "react";
 import React from 'react';
-import ffc from './../../../assets/img/ffc.png';
 import { Row, Col } from 'react-bootstrap';
 import * as common from "../constant/common";
 import CategoryBox from "../component/nav/CategoryBox";
-//const HomeCategory = [1,2,3,4];
 
 export default class HomePage extends Component {
     constructor(props: any){
