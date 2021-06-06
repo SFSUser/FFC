@@ -40,7 +40,14 @@ body {
     height: 300px;
     margin-top: 20px;
     text-align: center;
-    color: white;
+
+    a {
+        color: white;
+        &:hover{
+            text-decoration: none;
+            color: $color-brown;
+        }
+    }
 
     h4 {
         font-size: 50px;

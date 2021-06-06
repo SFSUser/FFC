@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CategoryBoxProp from 'tsc/entity/nav/props/CategoryBoxProp';
 import $ from "jquery";
 
@@ -27,7 +28,7 @@ export default class CategoryBox extends Component<CategoryBoxProp> {
                 <h4>{me.props.data.title}</h4>
                 <ul>
                     {me.props.data.sections.map( (s: any, i: any) => {
-                        return <li key={i}>{s.name}</li>;
+                        return <li key={i}><Link to={s.url}>{s.name}</Link></li>;
                     })}
                 </ul>
                 <div ref={me.image} className={`image image__${me.props.data.image}`}></div>

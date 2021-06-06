@@ -21,9 +21,20 @@ export default class HomePage extends Component {
                 <Row>
                     { common.HomeCategory.map( (cat, i) => {
                         return (
-                            <Col key={i} sm={6}>
-                                <CategoryBox data={cat}/>
-                            </Col>
+                            <>
+                                <Col key={i} sm={6}>
+                                    <CategoryBox data={cat}/>
+                                </Col>
+                                {i == 1 && 
+                                    <div className="col-sm-12 circle-container">
+                                        <div className="circle-fixer">
+                                            <div className="circle">
+                                                <span className="content">Content</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </>
                         );
                     }) }
                 </Row>
