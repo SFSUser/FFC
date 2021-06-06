@@ -16,13 +16,14 @@ export default class HomePage extends Component {
         return(
             <div>
                 <h1 className="ffc-title">Familia Franciscana de colombia</h1>
-                <div className="text-center p-2">
-                    <img className="ffc-logo-medium" src={ffc} />
-                </div>
+                {/*<div className="text-center">
+                    <img className="ffc-logo-small" src={ffc} />
+                </div>*/}
+                <div className="ffc-paja"></div>
                 <Row>
-                    { common.HomeCategory.map( cat => {
+                    { common.HomeCategory.map( (cat, i) => {
                         return (
-                            <Col sm={6}>
+                            <Col key={i} sm={6}>
                                 <CategoryBox data={cat}/>
                             </Col>
                         );

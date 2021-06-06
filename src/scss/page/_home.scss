@@ -9,6 +9,13 @@ body {
     margin: auto;
 }
 
+.ffc-paja {
+    background-image: url('./../../assets/img/paja.png');
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
 .ffc-title {
     text-align: center;
     color: #5b3715;
@@ -20,29 +27,68 @@ body {
     margin: auto;
     margin-bottom: 30px;
 }
+.ffc-logo-small {
+    height: 70px;
+    margin: auto;
+    margin-bottom: 30px;
+}
 
 .category {
+    border-radius: 15px !important;
     height: 300px;
-    background-size: cover;
-    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     color: white;
 
-    webkit-filter: blur(4px); 
-    filter: blur(4px);
-
     h4 {
         font-size: 50px;
+        z-index: 2;
+    }
+
+    :hover{
+        div {
+            filter: none;
+        }
+    } 
+
+    ul {
+        z-index: 2;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        li {
+            font-size: 25px;
+            cursor: pointer;
+            background-color: #ffffff47;
+            &:hover {
+                background-color: white;
+                color: #5b3715;
+            }
+        }
     }
 
     &:hover {
         filter: none;
     }
 
-    @each $image in $home_images {
-        &__#{$image} {
-            background-image: url('./../../assets/img/art/#{$image}.jpg');
+    &__image {
+        left: 0;
+        right: 0;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        filter: blur(5px);
+
+        &:hover {
+            filter: none;
+        }
+
+        @each $image in $home_images {
+            &__#{$image} {
+                background-image: url('./../../assets/img/art/#{$image}.jpg');
+            }
         }
     }
 }
-
