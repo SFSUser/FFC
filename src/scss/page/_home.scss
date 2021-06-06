@@ -1,7 +1,7 @@
 body {
     background-image: url($body-bg-image);
-    background-blend-mode: overlay;
-    background-color:gainsboro;
+    background-blend-mode: overlay !important;
+    background-color: gainsboro !important;
     height: 100%;
 }
 .fixer {
