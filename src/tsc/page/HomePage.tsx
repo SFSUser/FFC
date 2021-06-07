@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import * as common from "../constant/common";
@@ -22,17 +23,19 @@ export default class HomePage extends Component {
                     { common.HomeCategory.map( (cat, i) => {
                         return (
                             <>
-                                <Col key={i} sm={6}>
-                                    <CategoryBox data={cat}/>
-                                </Col>
-                                {i == 1 && 
-                                    <div className="col-sm-12 circle-container">
+                                {cat.center ? 
+                                    <div key={i} className="col-sm-12 circle-container">
                                         <div className="circle-fixer">
                                             <div className="circle">
-                                                <span className="content">Content</span>
+                                                <h4>{ cat.title }</h4>
+                                                {cat.sections.map( (s:any) => <Link to={s.url}>{s.name}</Link> )}
                                             </div>
                                         </div>
                                     </div>
+                                    :
+                                    <Col key={i} sm={6}>
+                                        <CategoryBox data={cat}/>
+                                    </Col>
                                 }
                             </>
                         );

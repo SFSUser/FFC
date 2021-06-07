@@ -1,5 +1,6 @@
 export const HomeCategory = [
     { 
+        center: false,
         title: 'JPIC', image: 'francisco',
         sections: [
             { url: '/build', name: 'JPIC' },
@@ -9,12 +10,25 @@ export const HomeCategory = [
         ]
     },
     { 
+        center: false,
         title: 'Formación', image: 'clara',
         sections: [
             { url: '/build', name: 'Escuela de pensamiento' }
         ]
     },
+    {
+        center: true,
+        title: 'Espiritualidad',
+        sections: [
+            { url: '/build', name: 'Oratorio' },
+            { url: '/build', name: 'Memoria' },
+            { url: '/build', name: 'Mística' },
+            { url: '/build', name: 'Reflexión' },
+            { url: '/build', name: 'Eremitorio' },
+        ]
+    },
     { 
+        center: false,
         title: 'Oratorio', image: 'francisco',
         sections: [
             { url: '/build', name: 'Vigilias' },
@@ -23,6 +37,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        center: false,
         title: 'Jóvenes', image: 'clara',
         sections: [
             { url: '/build', name: 'Red de jóvenes' },

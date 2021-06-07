@@ -91,7 +91,18 @@ $base-parallax-perspective: 8px;
     
     width: 400px;
     height: 400px;
-    line-height: 400px;
+    //line-height: 400px;
+
+    a {
+      display: block;
+      color: white;
+      height: 20px;
+
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
+    }
 }
 
 .circle:hover {

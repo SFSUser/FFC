@@ -26,11 +26,9 @@ export default class CategoryBox extends Component<CategoryBoxProp> {
         return (
             <div className={`card category`}>
                 <h4>{me.props.data.title}</h4>
-                <ul>
-                    {me.props.data.sections.map( (s: any, i: any) => {
-                        return <li key={i}><Link to={s.url}>{s.name}</Link></li>;
-                    })}
-                </ul>
+                {me.props.data.sections.map( (s: any, i: any) => {
+                    return <Link key={i} to={s.url}>{s.name}</Link>;
+                })}
                 <div ref={me.image} className={`image image__${me.props.data.image}`}></div>
             </div>
         );
