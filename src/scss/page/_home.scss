@@ -49,6 +49,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    h3 {
+        font-size: 0.7em;
+        z-index: 2;
+        position: absolute;
+    }
 }
 
 .home-bar-middle {

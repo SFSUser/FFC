@@ -21,9 +21,18 @@ export default class HomePage extends Component {
             <div className="wrapper">
                 <div className="home" style={{height: me.WinHeight }}>
                     <div className="home-bar-image">
-                        <div className="home-cell image image__jpic">JPIC</div>
-                        <div className="home-cell image image__fco_jesus"><b>Formación</b></div>
-                        <div className="home-cell image image__donate">Donaciones</div>
+                        <div className="home-cell">
+                            <h3>JPIC</h3>
+                            <div className="image image__jpic"></div>
+                        </div>
+                        <div className="home-cell image__fco_jesus">
+                            <h3>Formación</h3>
+                            <div className="image image__fco_jesus"></div>
+                        </div>
+                        <div className="home-cell image__donate">
+                            <h3>Donaciones</h3>
+                            <div className="image image__donate"></div>
+                        </div>
                     </div>
                     <div className="home-bar-middle">
                         <div>
@@ -39,9 +48,18 @@ export default class HomePage extends Component {
                         </div>
                     </div>
                     <div className="home-bar-image">
-                        <div className="home-cell image image__fco_rendon">Oratorio</div>
-                        <div className="home-cell image image__jufra">Jóvenes</div>
-                        <div className="home-cell image image__tejido_artesanal">Tienda</div>
+                        <div className="home-cell image__fco_rendon">
+                            <h3>Oratorio</h3>
+                            <div className="image image__fco_rendon"></div>
+                        </div>
+                        <div className="home-cell image__jufra">
+                            <h3>Jóvenes</h3>
+                            <div className="image image__jufra"></div>
+                        </div>
+                        <div className="home-cell image__tejido_artesanal">
+                            <h3>Tienda</h3>
+                            <div className="image image__tejido_artesanal"></div>
+                        </div>
                     </div>
                 </div>
             </div>
