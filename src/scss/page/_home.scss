@@ -58,6 +58,8 @@ body {
 }
 
 .home-bar-middle {
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,.5)), url($body-bg-image);
+
     align-items: stretch;
     flex: 1;
     height: 200px;
