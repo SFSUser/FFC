@@ -4,43 +4,46 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import * as common from "../constant/common";
 import CategoryBox from "../component/nav/CategoryBox";
+import FFC from  '../../../assets/img/ffc.png';
 
 export default class HomePage extends Component {
     constructor(props: any){
         super(props);
     }
 
+    public get WinHeight() {
+        return window.innerHeight + "px";
+    }
+
     render(){
         let me = this;
         return(
-            <div>
-                <h1 className="ffc-title">Familia Franciscana de colombia</h1>
-                {/*<div className="text-center">
-                    <img className="ffc-logo-small" src={ffc} />
-                </div>*/}
-                <div className="ffc-paja"></div>
-                <Row>
-                    { common.HomeCategory.map( (cat, i) => {
-                        return (
-                            <>
-                                {cat.center ? 
-                                    <div key={i} className="col-sm-12 circle-container">
-                                        <div className="circle-fixer">
-                                            <div className="circle">
-                                                <h4>{ cat.title }</h4>
-                                                {cat.sections.map( (s:any) => <Link to={s.url}>{s.name}</Link> )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    :
-                                    <Col key={i} sm={6}>
-                                        <CategoryBox data={cat}/>
-                                    </Col>
-                                }
-                            </>
-                        );
-                    }) }
-                </Row>
+            <div className="wrapper">
+                <div className="home" style={{height: me.WinHeight }}>
+                    <div className="home-bar-image">
+                        <div className="home-cell image image__jpic">JPIC</div>
+                        <div className="home-cell image image__fco_jesus"><b>Formación</b></div>
+                        <div className="home-cell image image__donate">Donaciones</div>
+                    </div>
+                    <div className="home-bar-middle">
+                        <div>
+                            <div className="text-center">
+                                <img width={100} src={FFC} />
+                            </div>
+                            <h1>Familia Franciscana de Colombia</h1>
+                        </div>
+                        <div>
+                            <span>
+                                Espirituralidad
+                            </span>
+                        </div>
+                    </div>
+                    <div className="home-bar-image">
+                        <div className="home-cell image image__fco_rendon">Oratorio</div>
+                        <div className="home-cell image image__jufra">Jóvenes</div>
+                        <div className="home-cell image image__tejido_artesanal">Tienda</div>
+                    </div>
+                </div>
             </div>
         );
     }

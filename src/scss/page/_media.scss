@@ -1,0 +1,16 @@
+.image {
+    background-size: cover;
+    filter: blur(4px);
+    transition: filter 4s;
+
+    &:hover {
+        filter: none;
+        transition: filter 1s;
+    }
+
+    @each $image in $home_images {
+        &__#{$image} {
+            background-image: url('./../../assets/img/art/#{$image}.jpg');
+        }
+    }
+}

@@ -10,23 +10,21 @@ import BuildPage from './BuildPage';
 export default class BasePage extends Component {
     render (){
         return (
-            <div>
-                <div className="fixer">
-                    <HashRouter>
-                        <Switch>
-                            <Route exact path="/">
-                                <HomePage/>
-                            </Route>
-                            <Route path="/test">
-                                <TestPage />
-                            </Route>
-                            <Route path="/build">
-                                <BuildPage />
-                            </Route>
-                        </Switch>
-                    </HashRouter>
-                    <Footer/>
-                </div>
+            <div className="wrapper">
+                <HashRouter>
+                    <Switch>
+                        <Route exact path="/">
+                            <HomePage/>
+                        </Route>
+                        <Route path="/test">
+                            <TestPage />
+                        </Route>
+                        <Route path="/build">
+                            <BuildPage />
+                        </Route>
+                    </Switch>
+                </HashRouter>
+                <Footer/>
             </div>
         );
     }
