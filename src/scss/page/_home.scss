@@ -76,11 +76,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: 200px;
 
     &:hover {
         text-decoration: none;
     }
 }
+
 .home-bar-pattern {
     flex: 1;
     background-image: url(../../assets/img/art/wayu1.png);
@@ -93,9 +95,8 @@ body {
 .footer-bar-sections {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
     background-color: $color-gray;
+    padding: 30px 15% 20px 15%;
 }
 
 .footer-bar-section {
@@ -117,11 +118,10 @@ body {
 
 .footer-bar-social {
     display: flex;
-    background-color: $color-gray;
+    background-color: $color-gray-dark;
     text-align: center;
-    color: $color-purple;
-    padding: 20px 0px 20px 0px;
-    color: $color-purple;
+    padding: 20px 30% 20px 30%;
+    color: $color-golden;
 
     div {
         cursor: pointer;
@@ -138,7 +138,7 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 550px) {
     .mobil {
         display: block;
     }
@@ -155,6 +155,7 @@ body {
     }
 
     .footer-bar-sections {
+        padding: 30px 15px 20px 15px;
         flex-direction: column;
     }
 
