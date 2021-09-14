@@ -46,6 +46,7 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                             </Link>
                         )}
                     </div>
+                    <div className="home-bar-pattern"></div>
                     <div className="home-bar-middle">
                         <div>
                             <div className="text-center">
@@ -61,6 +62,7 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                             </Link>
                         )}
                     </div>
+                    <div className="home-bar-pattern"></div>
                     <div className="home-bar-image">
                         {HomeCategory.filter( c => c.group == 2 ).map( (c, i) => 
                             <Link key={i} to={c.url} className="home-cell">

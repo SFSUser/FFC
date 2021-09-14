@@ -17,7 +17,6 @@ body {
 
 body {
     background-blend-mode: overlay !important;
-    background-color: gainsboro !important;
     height: 100%;
 }
 
@@ -81,6 +80,14 @@ body {
     &:hover {
         text-decoration: none;
     }
+}
+.home-bar-pattern {
+    flex: 1;
+    background-image: url(../../assets/img/art/wayu.png);
+    height: 10px;
+    max-height: 30px;
+    background-size: contain;
+    background-repeat: repeat-x;
 }
 
 .footer-bar-sections {
