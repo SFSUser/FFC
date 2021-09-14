@@ -41,35 +41,119 @@ body {
 
 .home-cell {
     flex: 1;
-    border: white 4px solid;
+    border: white 1px solid;
     font-size: 3em;
     color: white;
     cursor: pointer;
+    overflow: hidden;
     
     display: flex;
     align-items: center;
     justify-content: center;
 
+    &:hover {
+        text-decoration: none;
+        color: white;
+    }
+
     h3 {
-        font-size: 0.7em;
+        font-size: 0.8em;
         z-index: 2;
         position: absolute;
     }
 }
 
 .home-bar-middle {
-    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,.5)), url($body-bg-image);
-
+    background-image: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.9)), url($body-bg-image);
     align-items: stretch;
     flex: 1;
     height: 200px;
     text-align: center;
     font-size: 2em;
-    color: #542015;
+    color: $color-brown;
     background-color: white;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.footer-bar-sections {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: $color-gray;
+}
+
+.footer-bar-section {
+    flex: 1;
+    text-align: center;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    
+    &:hover {
+        text-decoration: none;
+        transition: color 0.2s;
+        color: $color-yellow;
+        background-color: $color-gray;
+    }
+}
+
+.footer-bar-social {
+    display: flex;
+    background-color: $color-gray;
+    text-align: center;
+    color: $color-purple;
+    padding: 20px 0px 20px 0px;
+    color: $color-purple;
+
+    div {
+        cursor: pointer;
+        flex: 1;
+        transition: color 0.5s;
+        &:hover {
+            color: white;
+            transition: color 0.5s;
+        }
+    }
+}
+
+.mobil {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .mobil {
+        display: block;
+    }
+
+    .home-bar-image {
+        flex-direction: column;
+    }
+
+    .home-bar-middle {
+        height: auto;
+        h1 {
+            font-size: 1em;
+        }
+    }
+
+    .footer-bar-sections {
+        flex-direction: column;
+    }
+
+    .footer-bar-social {
+        span {
+            display: none;
+        }
+    }
 }

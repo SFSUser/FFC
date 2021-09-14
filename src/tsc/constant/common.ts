@@ -1,7 +1,9 @@
 export const HomeCategory = [
     { 
+        group: 1,
         center: false,
-        title: 'JPIC', image: 'francisco',
+        title: 'JPIC', image: 'jpic',
+        url: '/build',
         sections: [
             { url: '/build', name: 'JPIC' },
             { url: '/build', name: 'Derechos humanos' },
@@ -10,15 +12,28 @@ export const HomeCategory = [
         ]
     },
     { 
+        group: 1,
         center: false,
-        title: 'Formación', image: 'clara',
+        title: 'Formación', image: 'fco_jesus',
+        url: '/build',
+        sections: [
+            { url: '/build', name: 'Escuela de pensamiento' }
+        ]
+    },
+    { 
+        group: 1,
+        center: false,
+        title: 'Donaciones', image: 'donate',
+        url: '/build',
         sections: [
             { url: '/build', name: 'Escuela de pensamiento' }
         ]
     },
     {
+        group: 0,
         center: true,
         title: 'Espiritualidad',
+        url: '/build',
         sections: [
             { url: '/build', name: 'Oratorio' },
             { url: '/build', name: 'Memoria' },
@@ -28,8 +43,10 @@ export const HomeCategory = [
         ]
     },
     { 
+        group: 2,
         center: false,
-        title: 'Oratorio', image: 'francisco',
+        title: 'Oratorio', image: 'fco_rendon',
+        url: '/build',
         sections: [
             { url: '/build', name: 'Vigilias' },
             { url: '/build', name: 'Eucaristía' },
@@ -37,8 +54,20 @@ export const HomeCategory = [
         ]
     },
     { 
+        group: 2,
         center: false,
-        title: 'Jóvenes', image: 'clara',
+        title: 'Jóvenes', image: 'jufra',
+        url: '/build',
+        sections: [
+            { url: '/build', name: 'Red de jóvenes' },
+            { url: '/test', name: 'test' },
+        ]
+    },
+    { 
+        group: 2,
+        center: false,
+        title: 'Tienda', image: 'tejido_artesanal',
+        url: '/build',
         sections: [
             { url: '/build', name: 'Red de jóvenes' },
             { url: '/test', name: 'test' },

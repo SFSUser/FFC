@@ -23,8 +23,8 @@ export default class BasePage extends Component {
                             <BuildPage />
                         </Route>
                     </Switch>
+                    <Footer/>
                 </HashRouter>
-                <Footer/>
             </div>
         );
     }

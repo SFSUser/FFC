@@ -5,6 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 import * as common from "../constant/common";
 import CategoryBox from "../component/nav/CategoryBox";
 import FFC from  '../../../assets/img/ffc.png';
+import { HomeCategory } from "../constant/common";
 
 export default class HomePage extends Component<{}, { innerWidth: string}> {
     constructor(props: any){
@@ -38,18 +39,12 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
             <div className="wrapper">
                 <div className="home" style={{height: me.state.innerWidth }}>
                     <div className="home-bar-image">
-                        <div className="home-cell">
-                            <h3>JPIC</h3>
-                            <div className="image image__jpic"></div>
-                        </div>
-                        <div className="home-cell">
-                            <h3>Formación</h3>
-                            <div className="image image__fco_jesus"></div>
-                        </div>
-                        <div className="home-cell">
-                            <h3>Donaciones</h3>
-                            <div className="image image__donate"></div>
-                        </div>
+                        {HomeCategory.filter( c => c.group == 1 ).map( (c, i) => 
+                            <Link key={i} to={c.url} className="home-cell">
+                                <h3>{c.title}</h3>
+                                <div className={`image image__${c.image}`}></div>
+                            </Link>
+                        )}
                     </div>
                     <div className="home-bar-middle">
                         <div>
@@ -58,25 +53,21 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                             </div>
                             <h1>Familia Franciscana de Colombia</h1>
                         </div>
-                        <div>
-                            <span>
-                                Espirituralidad
-                            </span>
-                        </div>
+                        {HomeCategory.filter( c => c.group == 0 ).map( (c, i) => 
+                            <Link key={i} to={c.url}>
+                                <span>
+                                    {c.title}
+                                </span>
+                            </Link>
+                        )}
                     </div>
                     <div className="home-bar-image">
-                        <div className="home-cell">
-                            <h3>Oratorio</h3>
-                            <div className="image image__fco_rendon"></div>
-                        </div>
-                        <div className="home-cell">
-                            <h3>Jóvenes</h3>
-                            <div className="image image__jufra"></div>
-                        </div>
-                        <div className="home-cell">
-                            <h3>Tienda</h3>
-                            <div className="image image__tejido_artesanal"></div>
-                        </div>
+                        {HomeCategory.filter( c => c.group == 2 ).map( (c, i) => 
+                            <Link key={i} to={c.url} className="home-cell">
+                                <h3>{c.title}</h3>
+                                <div className={`image image__${c.image}`}></div>
+                            </Link>
+                        )}
                     </div>
                 </div>
             </div>
