@@ -78,8 +78,19 @@ body {
     justify-content: center;
     max-height: 200px;
 
-    &:hover {
-        text-decoration: none;
+    h1 {
+        font-size: 1em;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    a {
+        font-size: 0.7em;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 

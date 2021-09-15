@@ -50,7 +50,7 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                     <div className="home-bar-middle">
                         <div>
                             <div className="text-center">
-                                <img width={100} src={FFC} />
+                                <img src={FFC} />
                             </div>
                             <h1>Familia Franciscana de Colombia</h1>
                         </div>
