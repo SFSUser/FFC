@@ -10,7 +10,8 @@ export default class RedPage extends Component {
                 <div className="textcenter">
                     <div className="page-bg page-bg-migrantes">
                         <PageHeader title="Red Franciscana para Migrantes Colombia – RFM"/>
-                        <svg className="wave-brown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+                        <div className="box-spacer-2"></div>
+                        <svg className="wave-brown" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 85L25 78.7C50 72.3 100 59.7 150 52.3C200 45 250 43 300 45C350 47 400 53 450 58.5C500 64 550 69 600 73.5C650 78 700 82 750 79C800 76 850 66 875 61L900 56L900 101L875 101C850 101 800 101 750 101C700 101 650 101 600 101C550 101 500 101 450 101C400 101 350 101 300 101C250 101 200 101 150 101C100 101 50 101 25 101L0 101Z" fill="#0066FF" stroke-linecap="round" stroke-linejoin="miter"></path></svg>               
                     </div>
                 </div>
                 <div className="box box-brown text-white">
@@ -52,54 +53,54 @@ export default class RedPage extends Component {
                     </div>
                 </div>
                 <div className="box-white">
-                    <svg className="wave-gray" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill-opacity="1" d="M0,32L0,160L360,160L360,64L720,64L720,192L1080,192L1080,64L1440,64L1440,0L1080,0L1080,0L720,0L720,0L360,0L360,0L0,0L0,0Z"></path>
-                    </svg>
+                    <svg className="wave-gray" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF" stroke-linecap="square" stroke-linejoin="miter"></path></svg>
                     <div className="box pull-up text-gray">
                         <div className="text-center mb-3">
                             <h1>Nuestro equipo</h1>
                             De izquierda a derecha hermanoxs.
                         </div>
-                        <div className="hermanos">
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/g8F6Hpp.jpg"/>
-                                <h4>Ernesto Pérez</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/3yBmzsM.jpg"/>
-                                <h4>María de Jesús Lepesqueur</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/EvaBFGQ.jpg"/>
-                                <h4>Nydia Díaz</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/o7Zk1BP.jpg"/>
-                                <h4>Marta Rendón</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/iJO0YjX.jpg"/>
-                                <h4>Diomirna Rojas</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/OF3FW1D.jpg"/>
-                                <h4>Fray Juan Jairo Rendón, OFM</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/YrICGhi.jpg"/>
-                                <h4>María Margarita Sánchez</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/5LPr9kb.jpg"/>
-                                <h4>Fabián Valderrama</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/Sy6bqFn.jpg"/>
-                                <h4>Johanna Pérez</h4>
-                            </div>
-                            <div className="hermano-box">
-                                <img src="https://imgur.com/6x2q4AX.png"/>
-                                <h4>Miguel Ángel Martín</h4>
+                        <div className="box-fixer">
+                            <div className="hermanos">
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/g8F6Hpp.jpg"/>
+                                    <h4>Ernesto Pérez</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/3yBmzsM.jpg"/>
+                                    <h4>María de Jesús Lepesqueur</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/EvaBFGQ.jpg"/>
+                                    <h4>Nydia Díaz</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/o7Zk1BP.jpg"/>
+                                    <h4>Marta Rendón</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/iJO0YjX.jpg"/>
+                                    <h4>Diomirna Rojas</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/OF3FW1D.jpg"/>
+                                    <h4>Fray Juan Jairo Rendón, OFM</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/YrICGhi.jpg"/>
+                                    <h4>María Margarita Sánchez</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/5LPr9kb.jpg"/>
+                                    <h4>Fabián Valderrama</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/Sy6bqFn.jpg"/>
+                                    <h4>Johanna Pérez</h4>
+                                </div>
+                                <div className="hermano-box">
+                                    <img src="https://imgur.com/6x2q4AX.png"/>
+                                    <h4>Miguel Ángel Martín</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,7 +117,8 @@ export default class RedPage extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="box box-brown-ligth text-white">
+                <div className="box-brown-ligth text-white">
+                    <svg className="wave-brown" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF" stroke-linecap="square" stroke-linejoin="miter"></path></svg>
                     <div className="box-fixer">
                         <Row>
                             <Col>
@@ -144,7 +146,7 @@ export default class RedPage extends Component {
                             <Col>
                                 <h1>¿Cómo nos organizamos?</h1>
                                 <div className="text-center">
-                                    <img src="https://imgur.com/aIro263.png"/>  
+                                    <img width="100%" src="https://imgur.com/aIro263.png"/>  
                                 </div>
                             </Col>
                         </Row>

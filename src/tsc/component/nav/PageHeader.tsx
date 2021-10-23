@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import FFC from  '../../../../assets/img/ffc.png';
 import * as I from 'react-feather';
 
 export default class PageHeader extends Component<{title: string}> {
@@ -17,12 +18,15 @@ export default class PageHeader extends Component<{title: string}> {
         return (
             <div className="page-header">
                 <h1>
-                    <Link className="mt-0 mr-2" to="/">
+                    <img src={FFC} />
+
+                    {me.props.title}
+
+                    <Link className="mt-0 ml-2" to="/">
                         <Button variant="danger">
                             <I.ArrowLeft/> Volver
                         </Button>
                     </Link> 
-                    {me.props.title}
                 </h1>
             </div>
         );

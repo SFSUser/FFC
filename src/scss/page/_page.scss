@@ -3,14 +3,24 @@
     font-size: 30px;
     text-align: center;;
     width: 100%;
+
+    img {
+        max-height: 100px;
+    }
+
     h1 {
-        background-color: $color-brown-ligth;
-        color: $color-white;
+        background-color: $color-white;
+        color: $color-brown;
         margin-bottom: 0;
         padding: 10px;
         border-radius: 0 0 10px 10px;;
         margin: auto;
         width: 90%;
+
+        border-color: $color-golden;
+        border-width: 2px;
+        border-style: solid;
+        border-top-style: none;
     }
 
     button {
@@ -22,7 +32,6 @@
 .page-bg {
     background-size: cover;
     background-position-y: center;
-    min-height: 100px;
 }
 
 .page-bg-migrantes {
