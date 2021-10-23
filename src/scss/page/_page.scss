@@ -1,0 +1,72 @@
+
+.page-header {
+    font-size: 30px;
+    text-align: center;;
+    width: 100%;
+    h1 {
+        background-color: $color-brown-ligth;
+        color: $color-white;
+        margin-bottom: 0;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;;
+        margin: auto;
+        width: 90%;
+    }
+
+    button {
+        margin-top: -10px;
+        font-weight: bolder;
+    }
+}
+
+.page-bg {
+    background-size: cover;
+    background-position-y: center;
+    min-height: 100px;
+}
+
+.page-bg-migrantes {
+    background-image: url(https://imgur.com/haZ1J4Y.jpg);
+}
+
+.page-bg-migrantes2 {
+    background-image: url(https://imgur.com/KozqgRg.jpg);
+}
+
+.hermanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hermano-box {
+    margin: 7px;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    border-color: $color-brown-ligth;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 90px 90px 10px 10px;
+    text-align: center;
+    border-bottom: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: $color-blue;
+
+    &:hover {
+        border-bottom-color: $color-purple;
+    }
+
+    img {
+        height: 180px;
+        width: 180px;
+        border-radius: 180px;
+        object-fit: cover;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}

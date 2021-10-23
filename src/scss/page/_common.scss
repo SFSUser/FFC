@@ -7,3 +7,51 @@
     margin: 20px 0 400px 0;
     height: 400px;
 }
+
+.margin-center {
+    margin: auto;
+    display: inherit;
+}
+
+.box {
+    padding: 20px;
+}
+
+.box-fixer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.pull-up {
+    margin-top: -100px;
+}
+
+@each $color in map-keys($page-colors) {
+    .wave-#{$color} {
+        path {
+            fill: map-get($page-colors, $color);
+        }
+    }
+    .box-#{$color} {
+        background-color: map-get($page-colors, $color);
+        font-size: 20px;
+
+        h1 {
+            display: inherit;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    }
+    .title-#{$color}, .text-#{$color} {
+        color: map-get($page-colors, $color);
+    }
+    .anchor-#{$color}, .text-#{$color} {
+        color: map-get($page-colors, $color);
+        cursor: pointer;
+        &:hover {
+            text-decoration: none;
+            color: map-get($page-colors, $color);
+        }
+    }
+}

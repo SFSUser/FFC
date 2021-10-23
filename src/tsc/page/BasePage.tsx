@@ -5,6 +5,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import Footer from './section/Footer';
 import HomePage from './HomePage';
 import TestPage from './TestPage';
+import RedPage from './RedPage';
 import BuildPage from './BuildPage';
 
 export default class BasePage extends Component {
@@ -18,6 +19,9 @@ export default class BasePage extends Component {
                         </Route>
                         <Route path="/test">
                             <TestPage />
+                        </Route>
+                        <Route path="/red">
+                            <RedPage />
                         </Route>
                         <Route path="/build">
                             <BuildPage />

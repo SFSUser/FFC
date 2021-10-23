@@ -54,6 +54,10 @@ body {
     &:hover {
         text-decoration: none;
         color: white;
+
+        .section-list-d {
+            display: block;
+        }
     }
 
     h3 {
@@ -148,6 +152,55 @@ body {
 
 .mobil {
     display: none;
+}
+
+.section-list{
+    z-index: 10;
+    position: absolute;
+    font-size: 25px;
+    width: 30%;
+    text-align: center;;
+
+    a{
+        color: $color-brown;
+        background-color: #ffffff6b;
+        cursor: pointer;
+        display: block;
+        border-style: solid;
+        border-color: $color-golden;
+        border-width: 1px;
+        border-radius: 15px;
+        margin-bottom: 2px;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #ffffffa6;
+            color: $color-purple;
+        }
+    }
+}
+
+.family-list {
+    font-size: 15px;
+    list-style: decimal;
+    margin-bottom: 10px;
+
+    li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+.backdrop {
+    background-color: #00000047;
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 @media only screen and (max-width: 550px) {

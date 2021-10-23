@@ -9,6 +9,21 @@ $color-blue-ligth: #527bb9;
 $color-blue: #020240;
 $color-green: #5f8639;
 $color-golden: #cc9e62;
+$color-white: white;
+
+$page-colors: (
+    white: $color-white,
+    brown: $color-brown, 
+    brown-ligth: $color-brown-ligth, 
+    gray: $color-gray, 
+    gray-dark: $color-gray-dark, 
+    purple: $color-purple, 
+    yellow: $color-yellow, 
+    blue: $color-blue, 
+    blue-ligth: $color-blue-ligth, 
+    green: $color-green, 
+    golden: $color-golden
+);
 
 $body-bg-image: '../../assets/img/fondo_tela.jpg';
 $home_images: 

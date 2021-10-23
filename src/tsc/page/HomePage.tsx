@@ -1,17 +1,16 @@
 import { Component } from "react";
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
-import * as common from "../constant/common";
-import CategoryBox from "../component/nav/CategoryBox";
+import * as I from 'react-feather';
 import FFC from  '../../../assets/img/ffc.png';
 import { HomeCategory } from "../constant/common";
 
-export default class HomePage extends Component<{}, { innerWidth: string}> {
+export default class HomePage extends Component<{}, { innerWidth: string, category: any}> {
     constructor(props: any){
         super(props);
         this.state = {
-            innerWidth: window.innerHeight + "px"
+            innerWidth: window.innerHeight + "px",
+            category: null,
         };
     }
 
@@ -27,6 +26,13 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
         }
         window.onresize = me.resizeEvent;
     }
+
+    private setCategory(category: any){
+        let me = this;
+        me.setState({
+            category: category
+        });
+    }
     
     componentWillUnmount(){
         let me = this;
@@ -40,10 +46,26 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                 <div className="home" style={{height: me.state.innerWidth }}>
                     <div className="home-bar-image">
                         {HomeCategory.filter( c => c.group == 1 ).map( (c, i) => 
-                            <Link key={i} to={c.url} className="home-cell">
-                                <h3>{c.title}</h3>
+                            <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
+                                {me.state.category !== c && 
+                                    <h3>
+                                        {c.title}
+                                    </h3>
+                                }
                                 <div className={`image image__${c.image}`}></div>
-                            </Link>
+                                {me.state.category == c &&
+                                    <div className="section-list">
+                                        <h2>
+                                            {c.title}
+                                        </h2>
+                                        {c.sections.map( (s: any, i) => 
+                                            <Link key={i} to={s.url}>
+                                                {s.name} {!s.ready && <I.AlertTriangle/>} 
+                                            </Link>
+                                        )}
+                                    </div>
+                                }
+                            </div>
                         )}
                     </div>
                     <div className="home-bar-pattern"></div>
@@ -55,22 +77,67 @@ export default class HomePage extends Component<{}, { innerWidth: string}> {
                             <h1>Familia Franciscana de Colombia</h1>
                         </div>
                         {HomeCategory.filter( c => c.group == 0 ).map( (c, i) => 
-                            <Link key={i} to={c.url}>
+                            <div key={i}>
                                 <span>
                                     {c.title}
                                 </span>
-                            </Link>
+                                {/*c.sections.map( s => 
+                                    <a>{s.name}</a>
+                                )*/}
+                            </div>
                         )}
+                        <ul className="family-list">
+                            <li>OFS</li>
+                            <li>OFM</li>
+                            <li>OFM Conv</li>
+                            <li>OFM Cap</li>
+                            <li>OSC</li>
+                            <li>Jufra</li>
+                            <li>HFMMA</li>
+                            <li>FIC</li>
+                            <li>FMI</li>
+                            <li>FMM</li>
+                        </ul>
                     </div>
                     <div className="home-bar-pattern"></div>
                     <div className="home-bar-image">
                         {HomeCategory.filter( c => c.group == 2 ).map( (c, i) => 
-                            <Link key={i} to={c.url} className="home-cell">
-                                <h3>{c.title}</h3>
+                            <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
+                                {me.state.category !== c && 
+                                    <h3>
+                                        {c.title}
+                                    </h3>
+                                }
                                 <div className={`image image__${c.image}`}></div>
-                            </Link>
+                                {me.state.category == c &&
+                                    <div className="section-list">
+                                        <h2>
+                                            {c.title}
+                                        </h2>
+                                        {c.sections.map( (s: any, i) => 
+                                            <Link key={i} to={s.url}>
+                                                {s.name} {!s.ready && <I.AlertTriangle/>} 
+                                            </Link>
+                                        )}
+                                    </div>
+                                }
+                            </div>
                         )}
                     </div>
+                    {  
+                        /* me.state.category &&
+                        <div className="backdrop">
+                            <div className="section-dialog">
+                                <ul className="section-list">
+                                    {me.state.category.sections.map( (s:any) => 
+                                        <li><Link to={s.url}>{s.name}</Link></li>
+                                    )}
+                                </ul>    
+                                <Button onClick={() => me.setCategory(null)}>Cerrar ventana</Button>
+                            </div>
+                        </div>
+                        */
+                     }
                 </div>
             </div>
         );
