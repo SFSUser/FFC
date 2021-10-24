@@ -115,7 +115,7 @@ body {
     padding: 30px 15% 20px 15%;
 }
 
-.footer-bar-section {
+.footer-bar-section, .header-bar-section {
     flex: 1;
     text-align: center;
     color: white;
@@ -157,13 +157,17 @@ body {
 .section-list{
     z-index: 10;
     position: absolute;
-    font-size: 25px;
+    font-size: 30px;
     width: 30%;
     text-align: center;;
 
+    h2 {
+        font-size: 35px;
+    }
+
     a{
         color: $color-brown;
-        background-color: #ffffff6b;
+        background-color: #ffffffa6;
         cursor: pointer;
         display: block;
         border-style: solid;
@@ -172,9 +176,13 @@ body {
         border-radius: 15px;
         margin-bottom: 2px;
 
+        svg {
+            color: red;
+        }
+
         &:hover {
             text-decoration: none;
-            background-color: #ffffffa6;
+            background-color: $color-white;
             color: $color-purple;
         }
     }
@@ -204,9 +212,6 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
-    .mobil {
-        display: block;
-    }
 
     .home-bar-image {
         flex-direction: column;
@@ -224,9 +229,31 @@ body {
         flex-direction: column;
     }
 
+    .header-bar-sections {
+        padding: 30px 15px 20px 15px;
+        flex-direction: column;
+    }
+
     .footer-bar-social {
         span {
             display: none;
+        }
+    }
+
+    .section-list {
+        margin-top: 200px;
+        width: 100%;
+        background-color: $color-white;
+        border-radius: 35px 35px 0 0;
+
+        h2 {
+            color: $color-brown;
+        }
+
+        a {
+            border-radius: 0px;
+            margin-bottom: 0px;
+            background-color: $color-white;
         }
     }
 }

@@ -1,5 +1,14 @@
 export const HomeCategory = [
+    {
+        id: 'inicio',
+        group: -1,
+        center: false,
+        title: 'Inicio',
+        url: '/',
+        sections: []
+    },
     { 
+        id: 'jpic',
         group: 1,
         center: false,
         title: 'JPIC', image: 'jpic',
@@ -12,6 +21,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        id: 'formacion',
         group: 1,
         center: false,
         title: 'Formación', image: 'fco_jesus',
@@ -21,6 +31,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        id: 'donacion',
         group: 1,
         center: false,
         title: 'Donaciones', image: 'donate',
@@ -30,6 +41,7 @@ export const HomeCategory = [
         ]
     },
     {
+        id: 'espiritualidad',
         group: 0,
         center: true,
         title: 'Espiritualidad',
@@ -43,6 +55,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        id: 'oratorio',
         group: 2,
         center: false,
         title: 'Oratorio', image: 'fco_rendon',
@@ -54,6 +67,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        id: 'jovenes',
         group: 2,
         center: false,
         title: 'Jóvenes', image: 'jufra',
@@ -64,6 +78,7 @@ export const HomeCategory = [
         ]
     },
     { 
+        id: 'tienda',
         group: 2,
         center: false,
         title: 'Tienda', image: 'tejido_artesanal',

@@ -8,7 +8,7 @@
         max-height: 100px;
     }
 
-    h1 {
+    .main-title {
         background-color: $color-white;
         color: $color-brown;
         margin-bottom: 0;
@@ -21,6 +21,12 @@
         border-width: 2px;
         border-style: solid;
         border-top-style: none;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     button {
@@ -36,6 +42,40 @@
 
 .page-bg-migrantes {
     background-image: url(https://imgur.com/haZ1J4Y.jpg);
+}
+
+.header-bar-sections {
+    display: flex;
+    justify-content: center;
+    background-color: $color-gray;
+    padding: 15px 15% 15px 15%;
+}
+
+.header-category-sections {
+    display: flex;
+    justify-content: center;
+    background-color: $color-white;
+    padding: 0px 15% 5px 15%;
+    font-size: 15px;
+    border-top: dashed $color-brown-ligth 1px;
+}
+
+.header-category-section {
+    flex: 1;
+    text-align: center;
+    color: $color-brown;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+    
+    &:hover, &--active {
+        text-decoration: none;
+        transition: color 0.2s;
+        color: $color-white;
+        border-radius: 0 0 15px 15px;
+        background-color: $color-brown;
+    }
 }
 
 .page-bg-migrantes2 {
@@ -79,3 +119,26 @@
         font-size: 20px;
     }
 }
+
+
+@media only screen and (max-width: 550px) {
+    .page-header {
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    .main-title {
+        div {
+            flex-direction: column;
+        }
+    }
+
+    .header-category-section { 
+        &:hover, &--active {
+            border-radius: 15px;
+        }
+    }
+}
+

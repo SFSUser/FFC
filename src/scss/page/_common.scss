@@ -20,6 +20,7 @@
 .box-fixer {
     max-width: 1200px;
     margin: auto;
+    overflow: hidden;
 }
 
 .box-spacer-1 {
@@ -61,5 +62,19 @@
             text-decoration: none;
             color: map-get($page-colors, $color);
         }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .mobil {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .pull-up {
+        margin-top: auto;
     }
 }

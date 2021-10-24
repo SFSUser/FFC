@@ -39,34 +39,39 @@ export default class HomePage extends Component<{}, { innerWidth: string, catego
         window.removeEventListener("resize", me.resizeEvent);
     }
 
+    private showLine(group: number){
+        let me = this;
+        return HomeCategory.filter( c => c.group == group ).map( (c, i) => 
+            <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
+                {me.state.category !== c && 
+                    <h3>
+                        {c.title}
+                    </h3>
+                }
+                <div className={`image image__${c.image}`}></div>
+                {me.state.category == c &&
+                    <div className="section-list">
+                        <h2>
+                            {c.title}
+                        </h2>
+                        {c.sections.map( (s: any, i) => 
+                            <Link key={i} to={s.url}>
+                                {!s.ready && <I.AlertTriangle/>} {s.name} 
+                            </Link>
+                        )}
+                    </div>
+                }
+            </div>
+        );
+    }
+
     render(){
         let me = this;
         return(
             <div className="wrapper">
                 <div className="home" style={{height: me.state.innerWidth }}>
                     <div className="home-bar-image">
-                        {HomeCategory.filter( c => c.group == 1 ).map( (c, i) => 
-                            <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
-                                {me.state.category !== c && 
-                                    <h3>
-                                        {c.title}
-                                    </h3>
-                                }
-                                <div className={`image image__${c.image}`}></div>
-                                {me.state.category == c &&
-                                    <div className="section-list">
-                                        <h2>
-                                            {c.title}
-                                        </h2>
-                                        {c.sections.map( (s: any, i) => 
-                                            <Link key={i} to={s.url}>
-                                                {s.name} {!s.ready && <I.AlertTriangle/>} 
-                                            </Link>
-                                        )}
-                                    </div>
-                                }
-                            </div>
-                        )}
+                        {me.showLine(1)}
                     </div>
                     <div className="home-bar-pattern"></div>
                     <div className="home-bar-middle">
@@ -76,16 +81,16 @@ export default class HomePage extends Component<{}, { innerWidth: string, catego
                             </div>
                             <h1>Familia Franciscana de Colombia</h1>
                         </div>
-                        {HomeCategory.filter( c => c.group == 0 ).map( (c, i) => 
+                        {/*HomeCategory.filter( c => c.group == 0 ).map( (c, i) => 
                             <div key={i}>
                                 <span>
                                     {c.title}
                                 </span>
-                                {/*c.sections.map( s => 
+                                {c.sections.map( s => 
                                     <a>{s.name}</a>
-                                )*/}
+                                )}
                             </div>
-                        )}
+                        )*/}
                         <ul className="family-list">
                             <li>OFS</li>
                             <li>OFM</li>
@@ -101,28 +106,7 @@ export default class HomePage extends Component<{}, { innerWidth: string, catego
                     </div>
                     <div className="home-bar-pattern"></div>
                     <div className="home-bar-image">
-                        {HomeCategory.filter( c => c.group == 2 ).map( (c, i) => 
-                            <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
-                                {me.state.category !== c && 
-                                    <h3>
-                                        {c.title}
-                                    </h3>
-                                }
-                                <div className={`image image__${c.image}`}></div>
-                                {me.state.category == c &&
-                                    <div className="section-list">
-                                        <h2>
-                                            {c.title}
-                                        </h2>
-                                        {c.sections.map( (s: any, i) => 
-                                            <Link key={i} to={s.url}>
-                                                {s.name} {!s.ready && <I.AlertTriangle/>} 
-                                            </Link>
-                                        )}
-                                    </div>
-                                }
-                            </div>
-                        )}
+                        {me.showLine(2)}
                     </div>
                     {  
                         /* me.state.category &&
