@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Router, Switch } from 'react-router';
-import { HashRouter, Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import Footer from './section/Footer';
 import HomePage from './HomePage';
@@ -12,7 +12,7 @@ export default class BasePage extends Component {
     render (){
         return (
             <div className="wrapper">
-                <HashRouter>
+                <BrowserRouter>
                     <Switch>
                         <Route exact path="/">
                             <HomePage/>
@@ -28,7 +28,7 @@ export default class BasePage extends Component {
                         </Route>
                     </Switch>
                     <Footer/>
-                </HashRouter>
+                </BrowserRouter>
             </div>
         );
     }

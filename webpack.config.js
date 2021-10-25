@@ -62,6 +62,9 @@ module.exports = {
     })
   ],
   devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+    hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
     port: 8888
   }

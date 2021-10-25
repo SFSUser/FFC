@@ -50,7 +50,7 @@ export default class PageHeader extends Component<{title: string, category: stri
                         {sections.length > 0 && 
                             <div className="header-category-sections">
                                 {sections.map( (s: any, i: number) => 
-                                    <Link key={i} to={s.url} className={`header-category-section ${("#" + s.url) == location.hash ? 'header-category-section--active' : ''}`}>
+                                    <Link key={i} to={s.url} className={`header-category-section ${(s.url) == location.pathname ? 'header-category-section--active' : ''}`}>
                                         {s.name}
                                     </Link>
                                 )}
