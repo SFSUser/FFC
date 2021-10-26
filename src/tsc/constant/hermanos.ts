@@ -32,7 +32,7 @@ export const HERMANOS = [
         grupos: 'red'
     },
     {
-        imagen: 'https://imgur.com/OF3FW1D.jpg',
+        imagen: 'https://imgur.com/sbFlZ4l.jpg',
         nombre: 'Fray Juan Jairo Rendón, OFM',
         cargo: '',
         grupos: 'red|escuela'
