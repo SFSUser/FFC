@@ -6,6 +6,7 @@ import Footer from './section/Footer';
 import HomePage from './HomePage';
 import TestPage from './TestPage';
 import RedPage from './RedPage';
+import EscuelaPage from './EscuelaPage';
 import BuildPage from './BuildPage';
 
 export default class BasePage extends Component {
@@ -22,6 +23,9 @@ export default class BasePage extends Component {
                         </Route>
                         <Route path="/red">
                             <RedPage />
+                        </Route>
+                        <Route path="/escuela">
+                            <EscuelaPage />
                         </Route>
                         <Route path="/build">
                             <BuildPage />

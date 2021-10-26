@@ -1,11 +1,15 @@
 import { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import React from 'react';
 import * as I from 'react-feather';
 import FFC from  '../../../assets/img/ffc.png';
 import { HomeCategory } from "../constant/common";
 
-export default class HomePage extends Component<{}, { innerWidth: string, category: any}> {
+import { createBrowserHistory } from "history";
+
+const customHistory = createBrowserHistory();
+
+export class HomePage extends Component<RouteComponentProps, { innerWidth: string, category: any}> {
     constructor(props: any){
         super(props);
         this.state = {
@@ -29,6 +33,12 @@ export default class HomePage extends Component<{}, { innerWidth: string, catego
 
     private setCategory(category: any){
         let me = this;
+
+        if(category.sections.length == 1) {
+            this.props.history.push(category.sections[0].url);
+            return;
+        }
+
         me.setState({
             category: category
         });
@@ -127,3 +137,5 @@ export default class HomePage extends Component<{}, { innerWidth: string, catego
         );
     }
 }
+
+export default withRouter(HomePage);

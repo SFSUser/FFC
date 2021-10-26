@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
+import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
 
 export default class RedPage extends Component {
@@ -60,46 +61,12 @@ export default class RedPage extends Component {
                         </div>
                         <div className="box-fixer">
                             <div className="hermanos">
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/g8F6Hpp.jpg"/>
-                                    <h4>Ernesto Pérez</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/3yBmzsM.jpg"/>
-                                    <h4>María de Jesús Lepesqueur</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/EvaBFGQ.jpg"/>
-                                    <h4>Nydia Díaz</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/o7Zk1BP.jpg"/>
-                                    <h4>Marta Rendón</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/iJO0YjX.jpg"/>
-                                    <h4>Diomirna Rojas</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/OF3FW1D.jpg"/>
-                                    <h4>Fray Juan Jairo Rendón, OFM</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/YrICGhi.jpg"/>
-                                    <h4>María Margarita Sánchez</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/5LPr9kb.jpg"/>
-                                    <h4>Fabián Valderrama</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/Sy6bqFn.jpg"/>
-                                    <h4>Johanna Pérez</h4>
-                                </div>
-                                <div className="hermano-box">
-                                    <img src="https://imgur.com/6x2q4AX.png"/>
-                                    <h4>Miguel Ángel Martín</h4>
-                                </div>
+                                { GET_GROUP("red").map( (h, i) =>
+                                    <div key={i} className="hermano-box">
+                                        <img src={h.imagen}/>
+                                        <h4>{h.nombre}</h4>
+                                    </div>
+                                 )}
                             </div>
                         </div>
                     </div>

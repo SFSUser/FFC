@@ -25,9 +25,9 @@ export const HomeCategory = [
         group: 1,
         center: false,
         title: 'Formación', image: 'fco_jesus',
-        url: '/build',
+        url: '/escuela',
         sections: [
-            { url: '/build', name: 'Escuela de pensamiento' }
+            { url: '/escuela', name: 'Escuela de pensamiento', ready: true }
         ]
     },
     { 
