@@ -62,13 +62,13 @@ export const HERMANOS = [
         grupos: 'red'
     },
     {
-        imagen: '',
+        imagen: 'https://imgur.com/jvQVfUl.jpg',
         nombre: 'César Augusto Baratto Abello',
         cargo: '',
         grupos: 'escuela'
     },
     {
-        imagen: '',
+        imagen: 'https://imgur.com/3vFakRi.jpg',
         nombre: 'Norma Liliana Sarmiento Romero',
         cargo: '',
         grupos: 'escuela'
