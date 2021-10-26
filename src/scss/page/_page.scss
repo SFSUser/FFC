@@ -40,24 +40,10 @@
     background-position-y: center;
 }
 
-.page-bg-migrantes {
-    background-image: url(https://imgur.com/haZ1J4Y.jpg);
-}
-
-.page-bg-migrantes2 {
-    background-image: url(https://imgur.com/KozqgRg.jpg);
-}
-
-.page-bg-escuela {
-    background-image: url(https://imgur.com/TrkPayq.jpg);
-}
-
-.page-bg-escuela2 {
-    background-image: url(https://imgur.com/7fQcbhG.jpg);
-}
-
-.page-bg-fco-angel {
-    background-image: url(https://imgur.com/UcjJVYU.jpg);
+@each $image in map-keys($external-images) {
+    .page-bg-#{$image} {
+        background-image: url(map-get($external-images, $image));
+    }
 }
 
 .table-formacion {
