@@ -1,3 +1,9 @@
+export const WEB_TITLE = "Familia Franciscana de Colombia";
+
+export const WEB_TITLE_SMALL = "FFC";
+
+export const WEB_DESCRIPTION = "Página web oficial de la Familia Franciscana de Colombia";
+
 export const HomeCategory = [
     {
         id: 'inicio',

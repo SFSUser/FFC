@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import FFC from  '../../../../assets/img/ffc.png';
 import * as I from 'react-feather';
-import { HomeCategory } from '../../constant/common';
+import { HomeCategory, WEB_TITLE_SMALL } from '../../constant/common';
+import { Helmet } from "react-helmet";
 
 export default class PageHeader extends Component<{title: string, category: string}> {
     constructor(props: any){
@@ -24,9 +25,16 @@ export default class PageHeader extends Component<{title: string, category: stri
     render() {
         let me = this;
         let sections = me.Sections;
+        let current_section = sections.filter( s => s.url == location.pathname)[0];
         
         return (
             <>
+                <div>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>{WEB_TITLE_SMALL} - {me.props.title}</title>
+                    </Helmet>
+                </div>
                 <div className="header-bar-sections desktop">
                     {HomeCategory.map( (c, i) => 
                         <Link key={i} to={c.url} className="header-bar-section">
@@ -50,7 +58,7 @@ export default class PageHeader extends Component<{title: string, category: stri
                         {sections.length > 1 && 
                             <div className="header-category-sections">
                                 {sections.map( (s: any, i: number) => 
-                                    <Link key={i} to={s.url} className={`header-category-section ${(s.url) == location.pathname ? 'header-category-section--active' : ''}`}>
+                                    <Link key={i} to={s.url} className={`header-category-section ${s == current_section ? 'header-category-section--active' : ''}`}>
                                         {s.name}
                                     </Link>
                                 )}
