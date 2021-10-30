@@ -9,6 +9,7 @@ import RedPage from './RedPage';
 import EscuelaPage from './EscuelaPage';
 import BuildPage from './BuildPage';
 import { WEB_DESCRIPTION, WEB_TITLE } from '../constant/common';
+import VersionPage from './VersionPage';
 
 export default class BasePage extends Component {
     render (){
@@ -35,6 +36,9 @@ export default class BasePage extends Component {
                         </Route>
                         <Route path="/build">
                             <BuildPage />
+                        </Route>
+                        <Route path="/version">
+                            <VersionPage />
                         </Route>
                     </Switch>
                     <Footer/>
