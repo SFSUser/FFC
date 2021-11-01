@@ -9,4 +9,3 @@ console.log(styles);
 
 const root = document.getElementById('root');
 ReactDOM.render(<BasePage />, root);
-initialize();
