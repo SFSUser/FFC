@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import Footer from './section/Footer';
 import HomePage from './HomePage';
 import TestPage from './TestPage';
-import RedPage from './RedPage';
+import MigrantesPage from './MigrantesPage';
 import EscuelaPage from './EscuelaPage';
 import BuildPage from './BuildPage';
 import { WEB_DESCRIPTION, WEB_TITLE } from '../constant/common';
@@ -29,7 +29,7 @@ export default class BasePage extends Component {
                             <TestPage />
                         </Route>
                         <Route path="/red">
-                            <RedPage />
+                            <MigrantesPage />
                         </Route>
                         <Route path="/escuela">
                             <EscuelaPage />

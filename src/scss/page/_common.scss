@@ -31,13 +31,27 @@
     height: 200px;
 }
 
+.box-spacer-3 {
+    height: 300px;
+}
+
 .pull-up {
     margin-top: -100px;
 }
 
+.pull-up-1 {
+    margin-top: -150px;
+}
+
+.pull-up-2 {
+    margin-top: -200px;
+}
+
 @each $color in map-keys($page-colors) {
     .wave-#{$color} {
+        width: 100%;
         path {
+            width: 100%;
             fill: map-get($page-colors, $color);
         }
     }

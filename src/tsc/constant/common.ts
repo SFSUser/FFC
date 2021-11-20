@@ -18,11 +18,11 @@ export const HomeCategory = [
         group: 1,
         center: false,
         title: 'JPIC', image: 'jpic',
-        url: '/red',
+        url: '/migrantes',
         sections: [
             { url: '/build', name: 'JPIC' },
             { url: '/build', name: 'Derechos humanos' },
-            { url: '/red', name: 'Red de Migrantes', ready: true},
+            { url: '/migrantes', name: 'Red de Migrantes', ready: true},
             { url: '/build', name: 'Extractivismo' }
         ]
     },

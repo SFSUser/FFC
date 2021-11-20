@@ -470,11 +470,23 @@ body {
 .box-spacer-2 {
   height: 200px; }
 
+.box-spacer-3 {
+  height: 300px; }
+
 .pull-up {
   margin-top: -100px; }
 
-.wave-white path {
-  fill: white; }
+.pull-up-1 {
+  margin-top: -150px; }
+
+.pull-up-2 {
+  margin-top: -200px; }
+
+.wave-white {
+  width: 100%; }
+  .wave-white path {
+    width: 100%;
+    fill: white; }
 
 .box-white {
   background-color: white;
@@ -495,8 +507,11 @@ body {
     text-decoration: none;
     color: white; }
 
-.wave-brown path {
-  fill: #5b3715; }
+.wave-brown {
+  width: 100%; }
+  .wave-brown path {
+    width: 100%;
+    fill: #5b3715; }
 
 .box-brown {
   background-color: #5b3715;
@@ -517,8 +532,11 @@ body {
     text-decoration: none;
     color: #5b3715; }
 
-.wave-brown-ligth path {
-  fill: #927151; }
+.wave-brown-ligth {
+  width: 100%; }
+  .wave-brown-ligth path {
+    width: 100%;
+    fill: #927151; }
 
 .box-brown-ligth {
   background-color: #927151;
@@ -539,8 +557,11 @@ body {
     text-decoration: none;
     color: #927151; }
 
-.wave-gray path {
-  fill: #818181; }
+.wave-gray {
+  width: 100%; }
+  .wave-gray path {
+    width: 100%;
+    fill: #818181; }
 
 .box-gray {
   background-color: #818181;
@@ -561,8 +582,11 @@ body {
     text-decoration: none;
     color: #818181; }
 
-.wave-gray-dark path {
-  fill: #636267; }
+.wave-gray-dark {
+  width: 100%; }
+  .wave-gray-dark path {
+    width: 100%;
+    fill: #636267; }
 
 .box-gray-dark {
   background-color: #636267;
@@ -583,8 +607,11 @@ body {
     text-decoration: none;
     color: #636267; }
 
-.wave-purple path {
-  fill: #ba0716; }
+.wave-purple {
+  width: 100%; }
+  .wave-purple path {
+    width: 100%;
+    fill: #ba0716; }
 
 .box-purple {
   background-color: #ba0716;
@@ -605,8 +632,11 @@ body {
     text-decoration: none;
     color: #ba0716; }
 
-.wave-yellow path {
-  fill: #ecc201; }
+.wave-yellow {
+  width: 100%; }
+  .wave-yellow path {
+    width: 100%;
+    fill: #ecc201; }
 
 .box-yellow {
   background-color: #ecc201;
@@ -627,8 +657,11 @@ body {
     text-decoration: none;
     color: #ecc201; }
 
-.wave-blue path {
-  fill: #020240; }
+.wave-blue {
+  width: 100%; }
+  .wave-blue path {
+    width: 100%;
+    fill: #020240; }
 
 .box-blue {
   background-color: #020240;
@@ -649,8 +682,11 @@ body {
     text-decoration: none;
     color: #020240; }
 
-.wave-blue-ligth path {
-  fill: #527bb9; }
+.wave-blue-ligth {
+  width: 100%; }
+  .wave-blue-ligth path {
+    width: 100%;
+    fill: #527bb9; }
 
 .box-blue-ligth {
   background-color: #527bb9;
@@ -671,8 +707,11 @@ body {
     text-decoration: none;
     color: #527bb9; }
 
-.wave-green path {
-  fill: #5f8639; }
+.wave-green {
+  width: 100%; }
+  .wave-green path {
+    width: 100%;
+    fill: #5f8639; }
 
 .box-green {
   background-color: #5f8639;
@@ -693,8 +732,11 @@ body {
     text-decoration: none;
     color: #5f8639; }
 
-.wave-golden path {
-  fill: #cc9e62; }
+.wave-golden {
+  width: 100%; }
+  .wave-golden path {
+    width: 100%;
+    fill: #cc9e62; }
 
 .box-golden {
   background-color: #cc9e62;
