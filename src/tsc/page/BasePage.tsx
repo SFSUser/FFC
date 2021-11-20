@@ -28,7 +28,7 @@ export default class BasePage extends Component {
                         <Route path="/test">
                             <TestPage />
                         </Route>
-                        <Route path="/red">
+                        <Route path="/migrantes">
                             <MigrantesPage />
                         </Route>
                         <Route path="/escuela">
