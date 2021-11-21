@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
+import Wave from 'react-wavify';
 
 export default class MigrantesPage extends Component {
     
@@ -30,8 +31,17 @@ export default class MigrantesPage extends Component {
                     </div>
                 </div>
                 <div className="page-bg page-bg-migrantes2">
-                    <svg className="wave-brown" viewBox="0 0 900 100"><path d="M0 17L21.5 16.7C43 16.3 86 15.7 128.8 17.5C171.7 19.3 214.3 23.7 257.2 25.5C300 27.3 343 26.7 385.8 26.2C428.7 25.7 471.3 25.3 514.2 23C557 20.7 600 16.3 642.8 15.5C685.7 14.7 728.3 17.3 771.2 18.7C814 20 857 20 878.5 20L900 20L900 0L878.5 0C857 0 814 0 771.2 0C728.3 0 685.7 0 642.8 0C600 0 557 0 514.2 0C471.3 0 428.7 0 385.8 0C343 0 300 0 257.2 0C214.3 0 171.7 0 128.8 0C86 0 43 0 21.5 0L0 0Z" stroke-linecap="round" stroke-linejoin="miter"></path></svg>      
-                    <div className="box-spacer-2"></div>       
+                    <Wave
+                        className="wave-brown wave-down"
+                        paused={false}
+                        options={{
+                            height: 20,
+                            amplitude: 60,
+                            speed: 0.15,
+                            points: 2
+                        }}
+                    />
+                    <div className="box-spacer-3"></div>       
                 </div>
                 <div className="box-gray text-white page-bg-escuela2">
                     <div className="box-fixer">
@@ -49,8 +59,17 @@ export default class MigrantesPage extends Component {
                                 <small>Carta Encíclica Fratelli Tutti del Santo Padre Francisco sobre la fraternidad y la amistad social, num. 251.</small>
                             </Col>
                         </Row>
-                    </div>                    
-                    <svg className="wave-brown-ligth" viewBox="0 0 900 100" ><path d="M0 51L129 49L257 69L386 75L514 71L643 56L771 74L900 49L900 101L771 101L643 101L514 101L386 101L257 101L129 101L0 101Z"></path></svg>
+                    </div>    
+                    <Wave
+                        className="wave-brown-ligth"
+                        paused={false}
+                        options={{
+                            height: 20,
+                            amplitude: 30,
+                            speed: 0.15,
+                            points: 5
+                        }}
+                    />
                 </div>
                 <div className="box-brown-ligth text-white">
                     <div className="box box-fixer">
@@ -88,7 +107,16 @@ export default class MigrantesPage extends Component {
                             </div>
                         </div>
                     </div>
-                    <svg className="wave-brown pull-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,192L60,197.3C120,203,240,213,360,202.7C480,192,600,160,720,144C840,128,960,128,1080,138.7C1200,149,1320,171,1380,181.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+                    <Wave
+                        className="wave-brown"
+                        paused={false}
+                        options={{
+                            height: 20,
+                            amplitude: 60,
+                            speed: 0.15,
+                            points: 2
+                        }}
+                    />                    
                 </div>
                 <div className="box-brown text-white">
                     <div className="box-fixer">

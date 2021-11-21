@@ -47,6 +47,10 @@
     margin-top: -200px;
 }
 
+.wave-down {
+    transform: rotate(180deg);
+}
+
 @each $color in map-keys($page-colors) {
     .wave-#{$color} {
         width: 100%;
