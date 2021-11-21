@@ -51,6 +51,7 @@
     "react-helmet": "^6.1.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-wavify": "^1.5.4",
     "s": "^1.0.0"
   }
 }
