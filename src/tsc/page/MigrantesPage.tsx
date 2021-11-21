@@ -61,10 +61,10 @@ export default class MigrantesPage extends Component {
                         </Row>
                     </div>    
                     <Wave
-                        className="wave-brown-ligth"
+                        className="wave-brown-ligth mt-5"
                         paused={false}
                         options={{
-                            height: 20,
+                            height: 10,
                             amplitude: 30,
                             speed: 0.15,
                             points: 5
