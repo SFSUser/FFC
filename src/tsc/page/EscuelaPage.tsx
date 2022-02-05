@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class EscuelaPage extends Component {
     
@@ -22,15 +23,17 @@ export default class EscuelaPage extends Component {
                                 <h1 className="title-white">De la historia del caminar de la Escuela</h1>
                             </Col>
                             <Col sm="12" md="8">
-                                <p>
-                                    La Familia Franciscana de Colombia tiene larga historia de Escuela de Formación al servicio de la familia y de la Iglesia; un ejemplo de ello fue la Escuela de Formadores para la vida religiosa que tuvo una larga existencia.
-                                </p>
-                                <p>
-                                    En el último tiempo, y por más de dos años, se ha venido cultivando el proyecto de la Escuela de Pensamiento y Formación Francisclariana que tuvo su mayor impulso para concretarla en el Congreso Nacional JPIC–FFC del mes de marzo del 2021; las distintas mesas de trabajo en las que se desarrolló el Congreso solicitaron a la Junta Directiva hacer realidad este proyecto; en las conclusiones de cada mesa se hicieron sugerencia de contenidos.
-                                </p>
-                                <p>
-                                    Se constituyó un equipo que dio forma a la propuesta formativa que actualmente se realiza en el Módulo Inicial.
-                                </p>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <p>
+                                        La Familia Franciscana de Colombia tiene larga historia de Escuela de Formación al servicio de la familia y de la Iglesia; un ejemplo de ello fue la Escuela de Formadores para la vida religiosa que tuvo una larga existencia.
+                                    </p>
+                                    <p>
+                                        En el último tiempo, y por más de dos años, se ha venido cultivando el proyecto de la Escuela de Pensamiento y Formación Francisclariana que tuvo su mayor impulso para concretarla en el Congreso Nacional JPIC–FFC del mes de marzo del 2021; las distintas mesas de trabajo en las que se desarrolló el Congreso solicitaron a la Junta Directiva hacer realidad este proyecto; en las conclusiones de cada mesa se hicieron sugerencia de contenidos.
+                                    </p>
+                                    <p>
+                                        Se constituyó un equipo que dio forma a la propuesta formativa que actualmente se realiza en el Módulo Inicial.
+                                    </p>
+                                </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>
@@ -38,28 +41,34 @@ export default class EscuelaPage extends Component {
                 <div className="page-bg page-bg-escuela2">                
                     <svg className="wave-blue" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF" stroke-linecap="square" stroke-linejoin="miter"></path></svg>
                     <div className="text-center box-spacer-2">
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeInDown">
                         <h1 className="title-white">Sentido e intencionalidad del Proceso Formativo</h1>
+                        </ScrollAnimation>
                     </div>
                 </div>
                 <div className="box box-gray text-white">
                     <div className="box-fixer">
                         <Row>
                             <Col sm="12" md="5">
-                                <h1 className="title-white">Objetivo</h1>
-                                <p>
-                                    Identificar y reflexionar acerca de las comprensiones, experiencias y prácticas, personales y comunitarias de espiritualidad francisclariana, en el marco del seguimiento de Jesús, viviendo el evangelio, desde la Iglesia, en la misión de instauración del reinado de Dios, que se reconocen en la cotidianidad de la vida, en el estilo de vida, en la formación de la interioridad y en los proyectos de los que se participa, para hacer consciencia de las claves de formación necesarias que fortalezcan los procesos y servicios en los que la espiritualidad toma forma de cara a cada persona y a la realidad en el contexto actual.
-                                </p>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <h1 className="title-white">Objetivo</h1>
+                                    <p>
+                                        Identificar y reflexionar acerca de las comprensiones, experiencias y prácticas, personales y comunitarias de espiritualidad francisclariana, en el marco del seguimiento de Jesús, viviendo el evangelio, desde la Iglesia, en la misión de instauración del reinado de Dios, que se reconocen en la cotidianidad de la vida, en el estilo de vida, en la formación de la interioridad y en los proyectos de los que se participa, para hacer consciencia de las claves de formación necesarias que fortalezcan los procesos y servicios en los que la espiritualidad toma forma de cara a cada persona y a la realidad en el contexto actual.
+                                    </p>
+                                </ScrollAnimation>
                             </Col>
                             <Col sm="12" md="7">
-                                <ol className="mt-5">
-                                    <li>Es un Proceso de Procesos.</li>
-                                    <li>Multidisciplinar e Integral – en las dimensiones de interioridad y entorno vital.</li>
-                                    <li>En perspectiva de liberación y transformación: (Vida personal; fraterno/sororal; eclesial/sinodal; social/ética ciudadana; Cuidado de la Creación).</li>
-                                    <li>Generador de un Mundo Posible (en la justicia según el amor de Dios).</li>
-                                    <li>De un Sujeto en Transformación y Transformador.</li>
-                                    <li>Inspirados en la Experiencia de Fe que aporta en la Construcción del Reinado de Dios.</li>
-                                    <li>Según la Espiritualidad de Francisco y Clara de Asís que se Encarna desde A.L.</li>
-                                </ol>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeInRight">
+                                    <ol className="mt-5">
+                                        <li>Es un Proceso de Procesos.</li>
+                                        <li>Multidisciplinar e Integral – en las dimensiones de interioridad y entorno vital.</li>
+                                        <li>En perspectiva de liberación y transformación: (Vida personal; fraterno/sororal; eclesial/sinodal; social/ética ciudadana; Cuidado de la Creación).</li>
+                                        <li>Generador de un Mundo Posible (en la justicia según el amor de Dios).</li>
+                                        <li>De un Sujeto en Transformación y Transformador.</li>
+                                        <li>Inspirados en la Experiencia de Fe que aporta en la Construcción del Reinado de Dios.</li>
+                                        <li>Según la Espiritualidad de Francisco y Clara de Asís que se Encarna desde A.L.</li>
+                                    </ol>
+                                </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>

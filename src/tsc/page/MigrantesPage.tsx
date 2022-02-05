@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
 import Wave from 'react-wavify';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export default class MigrantesPage extends Component {
     
@@ -23,9 +24,11 @@ export default class MigrantesPage extends Component {
                                 <h1 className="title-white">Nuestra historia</h1>
                             </Col>
                             <Col sm="12" md="8">
-                                <p className="text-justify">
-                                    La Red Franciscana para Migrantes Colombia (RFM Colombia) surgió en el Congreso JPIC de la Familia Franciscana de Colombia (FFC) realizado en Bogotá a finales de marzo de 2021. En este contexto, un <b>grupo de hermanos de la FFC</b> inspirados en el trabajo de la <b>Pastoral Migrante</b> de la Parroquia San Lorenzo Mártir en Medellín iniciaron un diálogo sobre cómo <b>acoger, proteger, promover e integrar</b> a quienes viven el <b>éxodo de la movilidad humana</b> desde la cultura del encuentro. Quehacer inspirado y acompañado por la Red Franciscana para Migrantes y Franciscans International (FI).  
-                                </p>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <p className="text-justify">
+                                        La Red Franciscana para Migrantes Colombia (RFM Colombia) surgió en el Congreso JPIC de la Familia Franciscana de Colombia (FFC) realizado en Bogotá a finales de marzo de 2021. En este contexto, un <b>grupo de hermanos de la FFC</b> inspirados en el trabajo de la <b>Pastoral Migrante</b> de la Parroquia San Lorenzo Mártir en Medellín iniciaron un diálogo sobre cómo <b>acoger, proteger, promover e integrar</b> a quienes viven el <b>éxodo de la movilidad humana</b> desde la cultura del encuentro. Quehacer inspirado y acompañado por la Red Franciscana para Migrantes y Franciscans International (FI).  
+                                    </p>
+                                </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>
@@ -47,16 +50,20 @@ export default class MigrantesPage extends Component {
                     <div className="box-fixer">
                         <Row>
                             <Col>
-                                <p className="mt-5 mb-2">
-                                    Cada forastero que llama a nuestra puerta es una ocasión de encuentro con Jesucristo, que se identifica con el extranjero acogido o rechazado en cualquier época de la historia (cf. Mt 25,35.43). 
-                                </p>                                    
-                                <small>Mensaje del Santo Padre Francisco para la Jornada Mundial del Emigrante y el Refugiado 2018 (14 enero 2018).</small>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <p className="mt-5 mb-2">
+                                        Cada forastero que llama a nuestra puerta es una ocasión de encuentro con Jesucristo, que se identifica con el extranjero acogido o rechazado en cualquier época de la historia (cf. Mt 25,35.43). 
+                                    </p>                                
+                                    <small>Mensaje del Santo Padre Francisco para la Jornada Mundial del Emigrante y el Refugiado 2018 (14 enero 2018).</small>
+                                </ScrollAnimation>                                    
                             </Col>
                             <Col>
-                                <p className="mt-5 mb-2 text-justify">
-                                    «La vida es el arte del encuentro, aunque haya tanto desencuentro por la vida»[204]. […] Es un estilo de vida tendiente a conformar ese poliedro que tiene muchas facetas, muchísimos lados, pero todos formando una unidad cargada de matices, […] representa una sociedad donde las diferencias conviven complementándose, enriqueciéndose e iluminándose recíprocamente, aunque esto implique discusiones y prevenciones. 
-                                </p>                                    
-                                <small>Carta Encíclica Fratelli Tutti del Santo Padre Francisco sobre la fraternidad y la amistad social, num. 251.</small>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <p className="mt-5 mb-2 text-justify">
+                                        «La vida es el arte del encuentro, aunque haya tanto desencuentro por la vida»[204]. […] Es un estilo de vida tendiente a conformar ese poliedro que tiene muchas facetas, muchísimos lados, pero todos formando una unidad cargada de matices, […] representa una sociedad donde las diferencias conviven complementándose, enriqueciéndose e iluminándose recíprocamente, aunque esto implique discusiones y prevenciones. 
+                                    </p>                                    
+                                    <small>Carta Encíclica Fratelli Tutti del Santo Padre Francisco sobre la fraternidad y la amistad social, num. 251.</small>
+                                </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>    
@@ -73,17 +80,25 @@ export default class MigrantesPage extends Component {
                 </div>
                 <div className="box-brown-ligth text-white">
                     <div className="box box-fixer">
-                        <h1 className="title-white">Objetivo</h1>
-                        <p className="text-justify">
-                            Animados en la <b>cultura del encuentro, acoger, proteger, promover e integrar</b> a los migrantes y desplazados internos que por razones de violencia generalizada, conflictos socio-políticos, situación económica o desastres naturales <b>transitan o buscan permanecer en Colombia</b> para <b>(re) construir sus proyectos de vida</b> y el <b>tejido social.</b>
-                        </p>
-                        <h1 className="title-white">Líneas de acción</h1>
-                        <ul>
-                            <li>Atención humanitaria de emergencia. Pastoral migrante, Parroquia San Lorenzo Mártir.</li>
-                            <li>Apoyo a procesos de acogida e inclusión. Proyecto territorial Medellín y Bogotá.  </li>
-                            <li>Incidencia política y legal a partir de la documentación de casos para la protección de los migrantes en el territorio colombiano. </li>
-                            <li>Comunicaciones. </li>
-                        </ul>
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
+                            <h1 className="title-white">Objetivo</h1>
+                        </ScrollAnimation>
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                            <p className="text-justify">
+                                Animados en la <b>cultura del encuentro, acoger, proteger, promover e integrar</b> a los migrantes y desplazados internos que por razones de violencia generalizada, conflictos socio-políticos, situación económica o desastres naturales <b>transitan o buscan permanecer en Colombia</b> para <b>(re) construir sus proyectos de vida</b> y el <b>tejido social.</b>
+                            </p>
+                        </ScrollAnimation>
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
+                            <h1 className="title-white">Líneas de acción</h1>
+                        </ScrollAnimation>
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                            <ul>
+                                <li>Atención humanitaria de emergencia. Pastoral migrante, Parroquia San Lorenzo Mártir.</li>
+                                <li>Apoyo a procesos de acogida e inclusión. Proyecto territorial Medellín y Bogotá.  </li>
+                                <li>Incidencia política y legal a partir de la documentación de casos para la protección de los migrantes en el territorio colombiano. </li>
+                                <li>Comunicaciones. </li>
+                            </ul>
+                        </ScrollAnimation>
                         {/*<h1 className="title-white">Poryectos en curso</h1>
                         <p>
                             Apoyo a procesos de acogida e inclusión agenciados por la Red Franciscana para Migrantes Colombia  en las ciudades de Medellín y Bogotá.
@@ -146,22 +161,28 @@ export default class MigrantesPage extends Component {
                     <div className="box-fixer">
                         <Row>
                             <Col>
-                                <h1 className="animate__animated animate__fadeIn">¿Dónde estamos</h1>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                    <h1>¿Dónde estamos</h1>
+                                </ScrollAnimation>
                                 <Row>
                                     <Col>
-                                        <ul>
-                                            <li>Barranquilla</li>
-                                            <li>Antioquia</li>
-                                            <li>Armenia</li>
-                                            <li>Pereira</li>
-                                            <li>Cali</li>
-                                            <li>Barrancabermeja</li>
-                                            <li>Bogotá</li>
-                                            <li>Sincelejo</li>
-                                        </ul>
+                                        <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                                            <ul>
+                                                <li>Barranquilla</li>
+                                                <li>Antioquia</li>
+                                                <li>Armenia</li>
+                                                <li>Pereira</li>
+                                                <li>Cali</li>
+                                                <li>Barrancabermeja</li>
+                                                <li>Bogotá</li>
+                                                <li>Sincelejo</li>
+                                            </ul>
+                                        </ScrollAnimation>
                                     </Col>
                                     <Col>
-                                        <img className="margin-center" src="https://imgur.com/52ox5Wh.png"/>
+                                        <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
+                                            <img className="margin-center" src="https://imgur.com/52ox5Wh.png"/>
+                                        </ScrollAnimation>
                                     </Col>
                                 </Row>
                                 <p className="mt-3">
@@ -170,7 +191,9 @@ export default class MigrantesPage extends Component {
                             </Col>
                             <Col>
                                 <div className="text-center">
-                                    <img width="100%" src="https://imgur.com/aIro263.png"/>  
+                                    <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
+                                        <img width="100%" src="https://imgur.com/aIro263.png"/>  
+                                    </ScrollAnimation>
                                 </div>
                             </Col>
                         </Row>

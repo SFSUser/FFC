@@ -10,6 +10,7 @@ import EscuelaPage from './EscuelaPage';
 import BuildPage from './BuildPage';
 import { WEB_DESCRIPTION, WEB_TITLE } from '../constant/common';
 import VersionPage from './VersionPage';
+import "animate.css/animate.min.css";
 import 'animate.css';
 
 export default class BasePage extends Component {
