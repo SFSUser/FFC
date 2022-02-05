@@ -41,6 +41,7 @@
   "dependencies": {
     "@types/react-helmet": "^6.1.4",
     "@types/react-router-dom": "^5.1.7",
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
     "firebase": "^9.2.0",
     "jquery": "^3.6.0",

@@ -20,10 +20,11 @@ export const HomeCategory = [
         title: 'JPIC', image: 'jpic',
         url: '/migrantes',
         sections: [
-            { url: '/build', name: 'JPIC' },
-            { url: '/build', name: 'Derechos humanos' },
-            { url: '/migrantes', name: 'Red de Migrantes', ready: true},
-            { url: '/build', name: 'Extractivismo' }
+            { url: '/build', name: 'Madre Tierra, Hermana Agua' },
+            { url: '/migrantes', name: 'Red Franciscana para Migrantes', ready: true},
+            { url: '/build', name: 'Red de Parejas Franciscanas' },
+            { url: '/build', name: 'Red de Jóvenes Franciscanos' },
+            { url: '/build', name: 'Nuevos Estilos de Vida - Eremitorios' }
         ]
     },
     { 
@@ -33,54 +34,54 @@ export const HomeCategory = [
         title: 'Formación', image: 'fco_jesus',
         url: '/escuela',
         sections: [
-            { url: '/escuela', name: 'Escuela de pensamiento', ready: true }
-        ]
-    },
-    { 
-        id: 'donacion',
-        group: 1,
-        center: false,
-        title: 'Donaciones', image: 'donate',
-        url: '/build',
-        sections: [
-            { url: '/build', name: 'Escuela de pensamiento' }
-        ]
-    },
-    {
-        id: 'espiritualidad',
-        group: 0,
-        center: true,
-        title: 'Espiritualidad',
-        url: '/build',
-        sections: [
-            { url: '/build', name: 'Oratorio' },
-            { url: '/build', name: 'Memoria' },
-            { url: '/build', name: 'Mística' },
-            { url: '/build', name: 'Reflexión' },
-            { url: '/build', name: 'Eremitorio' },
+            { url: '/escuela', name: 'Escuela de Pensamiento y Formación Francisclariana ', ready: true },
+            { url: '/build', name: 'Tertulias'},
+            { url: '/build', name: 'Otros servicios'},
         ]
     },
     { 
         id: 'oratorio',
-        group: 2,
+        group: 1,
         center: false,
         title: 'Oratorio', image: 'fco_rendon',
         url: '/build',
         sections: [
+            { url: '/build', name: 'Oración' },
             { url: '/build', name: 'Vigilias' },
-            { url: '/build', name: 'Eucaristía' },
-            { url: '/build', name: 'Musica, Oración, Textos' },
+            { url: '/build', name: 'Eucaristías' },
+            { url: '/build', name: 'Celebraciones Franciscanas' },
+            { url: '/build', name: 'Santo del Día' },
+            { url: '/build', name: 'Ordo' },
+            { url: '/build', name: 'Reflexión del Evangelio' },
         ]
     },
     { 
-        id: 'jovenes',
+        id: 'actualidad',
         group: 2,
         center: false,
-        title: 'Jóvenes', image: 'jufra',
+        title: 'Actualidad', image: 'fondo_novedades',
         url: '/build',
         sections: [
-            { url: '/build', name: 'Red de jóvenes' },
-            { url: '/test', name: 'test' },
+            { url: '/build', name: 'Noticias' },
+            { url: '/build', name: 'Artículos' },
+            { url: '/build', name: 'Documentos Eclesiales' },
+            { url: '/build', name: 'Experiencias Fraternas' },
+            { url: '/build', name: 'Análisis de la Realidad' },
+        ]
+    },
+    { 
+        id: 'donacion',
+        group: 2,
+        center: false,
+        title: 'Secretaría', image: 'donate',
+        url: '/build',
+        sections: [
+            { url: '/build', name: 'Información de Contacto' },
+            { url: '/build', name: 'Medio de Comunicación' },
+            { url: '/build', name: 'Directoria de las Congregaciones' },
+            { url: '/build', name: 'JUFRA' },
+            { url: '/build', name: 'Casas de Retiros' },
+            { url: '/build', name: 'Actividades del año' },
         ]
     },
     { 
@@ -90,8 +91,20 @@ export const HomeCategory = [
         title: 'Tienda', image: 'tejido_artesanal',
         url: '/build',
         sections: [
-            { url: '/build', name: 'Red de jóvenes' },
-            { url: '/test', name: 'test' },
+            { url: '/build', name: 'Venta de Libros' },
+            { url: '/build', name: 'Venta de Accesorios Religiosos' },
+            { url: '/build', name: 'Venta de Artesanías' },
         ]
-    }
+    },
+    /*{ 
+        id: 'donacion',
+        group: 2,
+        center: false,
+        title: 'OFICINA DE SECRETARÍA DE FAMILIA FRANCISCANA DE COLOMBIA- FFC', image: 'donate',
+        url: '/build',
+        sections: [
+            { url: '/build', name: 'Proyectos que se apoyan' },
+            { url: '/build', name: 'Botón de donación' },
+        ]
+    }*/
 ];

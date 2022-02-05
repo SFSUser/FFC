@@ -146,7 +146,7 @@ export default class MigrantesPage extends Component {
                     <div className="box-fixer">
                         <Row>
                             <Col>
-                                <h1>¿Dónde estamos</h1>
+                                <h1 className="animate__animated animate__fadeIn">¿Dónde estamos</h1>
                                 <Row>
                                     <Col>
                                         <ul>

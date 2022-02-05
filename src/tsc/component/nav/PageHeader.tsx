@@ -35,28 +35,28 @@ export default class PageHeader extends Component<{title: string, category: stri
                         <title>{WEB_TITLE_SMALL} - {me.props.title}</title>
                     </Helmet>
                 </div>
-                <div className="header-bar-sections desktop">
+                <div className="header-bar-sections desktop animate__animated animate__fadeIn animate__slow">
                     {HomeCategory.map( (c, i) => 
                         <Link key={i} to={c.url} className="header-bar-section">
                             {c.title}
                         </Link>
                     )}
                 </div>
-                <div className="page-header">
-                    <div className="main-title">
+                <div className="page-header animate__animated animate__fadeIn">
+                    <div className="main-title animate__animated animate__slideInDown">
                         <div>
-                            <img src={FFC} />
+                            <img className="animate__animated animate__zoomIn animate__slow" src={FFC} />
 
-                            <h1>{me.props.title}</h1>
+                            <h1 className="animate__animated animate__fadeIn animate__slow">{me.props.title}</h1>
 
                             <Link className="mt-0 ml-2" to="/">
-                                <Button variant="danger">
+                                <Button variant="danger" className="animate__animated animate__fadeIn animate__slow">
                                     <I.ArrowLeft/> Volver
                                 </Button>
                             </Link> 
                         </div>
                         {sections.length > 1 && 
-                            <div className="header-category-sections">
+                            <div className="header-category-sections animate__animated animate__fadeIn animate__delay-1s">
                                 {sections.map( (s: any, i: number) => 
                                     <Link key={i} to={s.url} className={`header-category-section ${s == current_section ? 'header-category-section--active' : ''}`}>
                                         {s.name}

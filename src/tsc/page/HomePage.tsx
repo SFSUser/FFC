@@ -54,7 +54,7 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
         return HomeCategory.filter( c => c.group == group ).map( (c, i) => 
             <div onClick={ () => me.setCategory(c) } key={i} className="home-cell">
                 {me.state.category !== c && 
-                    <h3>
+                    <h3 className="animate__animated  animate__fadeIn">
                         {c.title}
                     </h3>
                 }
@@ -87,9 +87,9 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                     <div className="home-bar-middle">
                         <div>
                             <div className="text-center">
-                                <img src={FFC} />
+                                <img className="animate__animated animate__zoomIn animate__slow" src={FFC} />
                             </div>
-                            <h1>Familia Franciscana de Colombia</h1>
+                            <h1 className="animate__animated  animate__fadeIn animate__delay-1s">Familia Franciscana de Colombia</h1>
                         </div>
                         {/*HomeCategory.filter( c => c.group == 0 ).map( (c, i) => 
                             <div key={i}>
@@ -101,7 +101,7 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                                 )}
                             </div>
                         )*/}
-                        <ul className="family-list">
+                        <ul className="family-list animate__animated  animate__fadeIn animate__delay-1s">
                             <li>OFS</li>
                             <li>OFM</li>
                             <li>OFM Conv</li>
