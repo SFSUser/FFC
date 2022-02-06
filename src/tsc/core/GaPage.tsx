@@ -8,7 +8,6 @@ export class GaPage extends React.Component<RouteComponentProps> {
     private ga(){
         var route = window.location.pathname + window.location.search;
         ReactGA.pageview(route);
-        console.log(route);
     }
 
     render(): React.ReactNode {
