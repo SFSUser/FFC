@@ -49,7 +49,7 @@ export default class MigrantesPage extends Component {
                 <div className="box-gray text-white page-bg-escuela2">
                     <div className="box-fixer">
                         <Row>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
                                     <p className="mt-5 mb-2">
                                         Cada forastero que llama a nuestra puerta es una ocasión de encuentro con Jesucristo, que se identifica con el extranjero acogido o rechazado en cualquier época de la historia (cf. Mt 25,35.43). 
@@ -57,7 +57,7 @@ export default class MigrantesPage extends Component {
                                     <small>Mensaje del Santo Padre Francisco para la Jornada Mundial del Emigrante y el Refugiado 2018 (14 enero 2018).</small>
                                 </ScrollAnimation>                                    
                             </Col>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
                                     <p className="mt-5 mb-2 text-justify">
                                         «La vida es el arte del encuentro, aunque haya tanto desencuentro por la vida»[204]. […] Es un estilo de vida tendiente a conformar ese poliedro que tiene muchas facetas, muchísimos lados, pero todos formando una unidad cargada de matices, […] representa una sociedad donde las diferencias conviven complementándose, enriqueciéndose e iluminándose recíprocamente, aunque esto implique discusiones y prevenciones. 
@@ -139,7 +139,7 @@ export default class MigrantesPage extends Component {
                     </div>
                     <div className="box-fixer mb-3">
                         <Row>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <p>
                                     Este evento se realizó duarante los dias 3 – 14 de octubre de 2021.
                                 </p>
@@ -150,7 +150,7 @@ export default class MigrantesPage extends Component {
                                     <li>Cali.</li>
                                 </ul>
                             </Col>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6ffbCWMiRjY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                             </Col>
                         </Row>
@@ -160,7 +160,7 @@ export default class MigrantesPage extends Component {
                     <svg className="wave-brown" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF" stroke-linecap="square" stroke-linejoin="miter"></path></svg>
                     <div className="box-fixer">
                         <Row>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
                                     <h1>¿Dónde estamos</h1>
                                 </ScrollAnimation>
@@ -189,7 +189,7 @@ export default class MigrantesPage extends Component {
                                     Tomado de <a className="anchor-yellow" href="https://redfranciscana.org/equipo/">https://redfranciscana.org/equipo/</a>
                                 </p>
                             </Col>
-                            <Col>
+                            <Col sm="12" md="6">
                                 <div className="text-center">
                                     <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
                                         <img width="100%" src="https://imgur.com/aIro263.png"/>  
