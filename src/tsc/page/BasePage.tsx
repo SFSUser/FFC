@@ -22,6 +22,7 @@ export default class BasePage extends Component {
                     <meta charSet="utf-8" />
                     <title>{WEB_TITLE}</title>
                     <meta name="description" content={WEB_DESCRIPTION}/>
+                    <link rel="icon" type="image/png" href="https://i.imgur.com/CChNH8e.png" sizes="16x16" />
                 </Helmet>
                 <BrowserRouter>
                     <Switch>
