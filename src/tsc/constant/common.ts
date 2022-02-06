@@ -34,7 +34,7 @@ export const HomeCategory = [
         title: 'Formación', image: 'fco_jesus',
         url: '/escuela',
         sections: [
-            { url: '/escuela', name: 'Escuela de Pensamiento y Formación Francisclariana ', ready: true },
+            { url: '/escuela', name: 'Escuela de Pensamiento y Formación Francisclariana ', shortname: "Escuela de Pensamiento", ready: true },
             { url: '/build', name: 'Tertulias'},
             { url: '/build', name: 'Otros servicios'},
         ]

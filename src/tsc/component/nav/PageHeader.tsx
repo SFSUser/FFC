@@ -59,7 +59,7 @@ export default class PageHeader extends Component<{title: string, category: stri
                             <div className="header-category-sections animate__animated animate__fadeIn animate__delay-1s">
                                 {sections.map( (s: any, i: number) => 
                                     <Link key={i} to={s.url} className={`header-category-section ${s == current_section ? 'header-category-section--active' : ''}`}>
-                                        {s.name}
+                                        {s.shortname ?? s.name}
                                     </Link>
                                 )}
                             </div>

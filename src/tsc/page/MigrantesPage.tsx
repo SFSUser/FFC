@@ -135,23 +135,29 @@ export default class MigrantesPage extends Component {
                 </div>
                 <div className="box-brown text-white">
                     <div className="box-fixer">
-                        <h1>Visita Franciscans International a FFC – JPIC</h1>
+                        <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
+                            <h1>Visita Franciscans International a FFC – JPIC</h1>
+                        </ScrollAnimation>
                     </div>
                     <div className="box-fixer mb-3">
                         <Row>
                             <Col sm="12" md="6">
-                                <p>
-                                    Este evento se realizó duarante los dias 3 – 14 de octubre de 2021.
-                                </p>
-                                <h3>Ciudades visitadas</h3>
-                                <ul>
-                                    <li>Bogotá.</li>
-                                    <li>Medellín.</li>
-                                    <li>Cali.</li>
-                                </ul>
+                            <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeInLeft">
+                                    <p>
+                                        Este evento se realizó duarante los dias 3 – 14 de octubre de 2021.
+                                    </p>
+                                    <h3>Ciudades visitadas</h3>
+                                    <ul>
+                                        <li>Bogotá.</li>
+                                        <li>Medellín.</li>
+                                        <li>Cali.</li>
+                                    </ul>
+                                </ScrollAnimation>
                             </Col>
                             <Col sm="12" md="6">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/6ffbCWMiRjY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                <ScrollAnimation duration={3} animateIn="animate__animated animate__zoomIn">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6ffbCWMiRjY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>

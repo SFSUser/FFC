@@ -75,6 +75,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: color 0.2s;
+    margin-left: 2px;
     
     &:hover, &--active {
         text-decoration: none;
