@@ -12,6 +12,8 @@ import { WEB_DESCRIPTION, WEB_TITLE } from '../constant/common';
 import VersionPage from './VersionPage';
 import "animate.css/animate.min.css";
 import 'animate.css';
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-YXN2QGTHRM');
 
 export default class BasePage extends Component {
     render (){
