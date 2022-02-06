@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, RouteComponentProps, Switch, withRouter } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import Footer from './section/Footer';
@@ -12,8 +12,7 @@ import { WEB_DESCRIPTION, WEB_TITLE } from '../constant/common';
 import VersionPage from './VersionPage';
 import "animate.css/animate.min.css";
 import 'animate.css';
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-YXN2QGTHRM');
+import GaPage from '../core/GaPage';
 
 export default class BasePage extends Component {
     render (){
@@ -27,19 +26,29 @@ export default class BasePage extends Component {
                 <BrowserRouter>
                     <Switch>
                         <Route exact path="/">
-                            <HomePage/>
+                            <GaPage>
+                                <HomePage/>
+                            </GaPage>
                         </Route>
                         <Route path="/test">
-                            <TestPage />
+                            <GaPage>
+                                <TestPage />
+                            </GaPage>
                         </Route>
                         <Route path="/migrantes">
-                            <MigrantesPage />
+                            <GaPage>
+                                <MigrantesPage />
+                            </GaPage>
                         </Route>
                         <Route path="/escuela">
-                            <EscuelaPage />
+                            <GaPage>
+                                <EscuelaPage />
+                            </GaPage>
                         </Route>
                         <Route path="/build">
-                            <BuildPage />
+                            <GaPage>
+                                <BuildPage />
+                            </GaPage>
                         </Route>
                         <Route path="/version">
                             <VersionPage />

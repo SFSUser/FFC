@@ -14,7 +14,7 @@ export default class MigrantesPage extends Component {
                     <div className="page-bg page-bg-migrantes">
                         <PageHeader category="jpic" title="Red Franciscana para Migrantes"/>
                         <div className="box-spacer-2"></div>
-                        <svg className="wave-brown" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 85L25 78.7C50 72.3 100 59.7 150 52.3C200 45 250 43 300 45C350 47 400 53 450 58.5C500 64 550 69 600 73.5C650 78 700 82 750 79C800 76 850 66 875 61L900 56L900 101L875 101C850 101 800 101 750 101C700 101 650 101 600 101C550 101 500 101 450 101C400 101 350 101 300 101C250 101 200 101 150 101C100 101 50 101 25 101L0 101Z" fill="#0066FF" stroke-linecap="round" stroke-linejoin="miter"></path></svg>               
+                        <svg className="wave-brown" viewBox="0 0 900 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 85L25 78.7C50 72.3 100 59.7 150 52.3C200 45 250 43 300 45C350 47 400 53 450 58.5C500 64 550 69 600 73.5C650 78 700 82 750 79C800 76 850 66 875 61L900 56L900 101L875 101C850 101 800 101 750 101C700 101 650 101 600 101C550 101 500 101 450 101C400 101 350 101 300 101C250 101 200 101 150 101C100 101 50 101 25 101L0 101Z" fill="#0066FF"></path></svg>               
                     </div>
                 </div>
                 <div className="box box-brown text-white">
@@ -106,7 +106,7 @@ export default class MigrantesPage extends Component {
                     </div>
                 </div>
                 <div className="box-white">
-                    <svg className="wave-brown-ligth" viewBox="0 0 900 200"><path d="M0 53L50 47.7C100 42.3 200 31.7 300 27C400 22.3 500 23.7 600 32C700 40.3 800 55.7 850 63.3L900 71L900 0L850 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0L0 0Z" stroke-linecap="round" stroke-linejoin="miter"></path></svg>
+                    <svg className="wave-brown-ligth" viewBox="0 0 900 200"><path d="M0 53L50 47.7C100 42.3 200 31.7 300 27C400 22.3 500 23.7 600 32C700 40.3 800 55.7 850 63.3L900 71L900 0L850 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0L0 0Z"></path></svg>
                     <div className="box pull-up text-gray">
                         <div className="text-center mb-3">
                             <h1>Nuestro equipo</h1>
@@ -163,7 +163,7 @@ export default class MigrantesPage extends Component {
                     </div>
                 </div>
                 <div className="box-brown-ligth text-white">
-                    <svg className="wave-brown" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF" stroke-linecap="square" stroke-linejoin="miter"></path></svg>
+                    <svg className="wave-brown" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M0 36L133 36L133 65L267 65L267 34L400 34L400 40L533 40L533 15L667 15L667 24L800 24L800 34L800 0L800 0L667 0L667 0L533 0L533 0L400 0L400 0L267 0L267 0L133 0L133 0L0 0Z" fill="#0066FF"></path></svg>
                     <div className="box-fixer">
                         <Row>
                             <Col sm="12" md="6">
@@ -206,7 +206,7 @@ export default class MigrantesPage extends Component {
                     </div>
                 </div>
                 <div className="box-white text-brown">
-                    <svg className="wave-brown-ligth" viewBox="0 0 900 200"><path d="M0 53L50 47.7C100 42.3 200 31.7 300 27C400 22.3 500 23.7 600 32C700 40.3 800 55.7 850 63.3L900 71L900 0L850 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0L0 0Z" stroke-linecap="round" stroke-linejoin="miter"></path></svg>
+                    <svg className="wave-brown-ligth" viewBox="0 0 900 200"><path d="M0 53L50 47.7C100 42.3 200 31.7 300 27C400 22.3 500 23.7 600 32C700 40.3 800 55.7 850 63.3L900 71L900 0L850 0C800 0 700 0 600 0C500 0 400 0 300 0C200 0 100 0 50 0L0 0Z"></path></svg>
                     <div className="box-fixer pull-up-2">
                         <h1>Información de contacto</h1>                    
                         <div className="box-spacer-2">

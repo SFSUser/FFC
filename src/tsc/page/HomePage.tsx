@@ -5,10 +5,6 @@ import * as I from 'react-feather';
 import FFC from  '../../../assets/img/ffc.png';
 import { HomeCategory } from "../constant/common";
 
-import { createBrowserHistory } from "history";
-
-const customHistory = createBrowserHistory();
-
 export class HomePage extends Component<RouteComponentProps, { innerWidth: string, category: any}> {
     constructor(props: any){
         super(props);
