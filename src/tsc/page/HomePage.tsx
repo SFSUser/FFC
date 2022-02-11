@@ -3,7 +3,8 @@ import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import React from 'react';
 import * as I from 'react-feather';
 import FFC from  '../../../assets/img/ffc.png';
-import { HomeCategory } from "../constant/common";
+import { COMUNIDADES, HomeCategory } from "../constant/common";
+import Marquee from "react-fast-marquee";
 
 export class HomePage extends Component<RouteComponentProps, { innerWidth: string, category: any}> {
     constructor(props: any){
@@ -97,18 +98,9 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                                 )}
                             </div>
                         )*/}
-                        <ul className="family-list animate__animated  animate__fadeIn animate__delay-1s">
-                            <li>OFS</li>
-                            <li>OFM</li>
-                            <li>OFM Conv</li>
-                            <li>OFM Cap</li>
-                            <li>OSC</li>
-                            <li>Jufra</li>
-                            <li>HFMMA</li>
-                            <li>FIC</li>
-                            <li>FMI</li>
-                            <li>FMM</li>
-                        </ul>
+                        <Marquee className="animate__animated  animate__fadeIn animate__delay-1s" style={{fontSize: 17}}>
+                            {COMUNIDADES.join(" - ")}
+                        </Marquee>
                     </div>
                     <div className="home-bar-pattern"></div>
                     <div className="home-bar-image">
