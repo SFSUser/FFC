@@ -38,6 +38,7 @@
 .page-bg {
     background-size: cover;
     background-position-y: center;
+    background-position-x: center;
 }
 
 @each $image in map-keys($external-images) {

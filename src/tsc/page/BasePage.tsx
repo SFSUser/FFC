@@ -13,6 +13,8 @@ import VersionPage from './VersionPage';
 import "animate.css/animate.min.css";
 import 'animate.css';
 import GaPage from '../core/GaPage';
+import TertuliaPage from './TertuliaPage';
+import ActualidadPage from './ActualidadPage';
 
 export default class BasePage extends Component {
     render (){
@@ -25,36 +27,54 @@ export default class BasePage extends Component {
                     <link rel="icon" type="image/png" href="https://i.imgur.com/CChNH8e.png" sizes="16x16" />
                 </Helmet>
                 <BrowserRouter>
-                    <Switch>
-                        <Route exact path="/">
-                            <GaPage>
-                                <HomePage/>
-                            </GaPage>
-                        </Route>
-                        <Route path="/test">
-                            <GaPage>
-                                <TestPage />
-                            </GaPage>
-                        </Route>
-                        <Route path="/migrantes">
-                            <GaPage>
-                                <MigrantesPage />
-                            </GaPage>
-                        </Route>
-                        <Route path="/escuela">
-                            <GaPage>
-                                <EscuelaPage />
-                            </GaPage>
-                        </Route>
-                        <Route path="/build">
-                            <GaPage>
-                                <BuildPage />
-                            </GaPage>
-                        </Route>
-                        <Route path="/version">
-                            <VersionPage />
-                        </Route>
-                    </Switch>
+                    <Route exact path="/">
+                        <GaPage>
+                            <HomePage/>
+                        </GaPage>
+                    </Route>
+                    <Route path="/test">
+                        <GaPage>
+                            <TestPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/migrantes">
+                        <GaPage>
+                            <MigrantesPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/escuela">
+                        <GaPage>
+                            <EscuelaPage />
+                        </GaPage>
+                    </Route>
+                    <Route exact path="/tertulia">
+                        <GaPage>
+                            <TertuliaPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/tertulia/:meet">
+                        <GaPage>
+                            <TertuliaPage />
+                        </GaPage>
+                    </Route>
+                    <Route exact path="/actualidad">
+                        <GaPage>
+                            <ActualidadPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/actualidad/:articulo">
+                        <GaPage>
+                            <ActualidadPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/build">
+                        <GaPage>
+                            <BuildPage />
+                        </GaPage>
+                    </Route>
+                    <Route path="/version">
+                        <VersionPage />
+                    </Route>
                     <Footer/>
                 </BrowserRouter>
             </div>

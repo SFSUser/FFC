@@ -108,7 +108,7 @@ export const HomeCategory = [
         url: '/escuela',
         sections: [
             { url: '/escuela', name: 'Escuela de Pensamiento y Formación Francisclariana ', shortname: "Escuela de Pensamiento", ready: true },
-            { url: '/build', name: 'Tertulias'},
+            { url: '/tertulia', name: 'Tertulias'},
             { url: '/build', name: 'Otros servicios'},
         ]
     },
@@ -133,13 +133,13 @@ export const HomeCategory = [
         group: 2,
         center: false,
         title: 'Actualidad', image: 'fondo_novedades',
-        url: '/build',
+        url: '/actualidad',
         sections: [
-            { url: '/build', name: 'Noticias' },
-            { url: '/build', name: 'Artículos' },
+            { url: '/actualidad', name: 'Noticias' },
+            /*{ url: '/build', name: 'Artículos' },
             { url: '/build', name: 'Documentos Eclesiales' },
             { url: '/build', name: 'Experiencias Fraternas' },
-            { url: '/build', name: 'Análisis de la Realidad' },
+            { url: '/build', name: 'Análisis de la Realidad' },*/
         ]
     },
     { 
