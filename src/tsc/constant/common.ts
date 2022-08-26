@@ -4,7 +4,7 @@ export const WEB_TITLE_SMALL = "FFC";
 
 export const WEB_DESCRIPTION = "Página web oficial de la Familia Franciscana de Colombia";
 
-export const COMUNIDADES = [...new Set([
+export const COMUNIDADES = Array.from(new Set([
     "OFS",
     "OFM",
     "OFM Conv",
@@ -75,7 +75,7 @@ export const COMUNIDADES = [...new Set([
     "FMI",
     //"FMM",
     //"TOR",
-].sort())];
+].sort()).values());
 
 export const HomeCategory = [
     {

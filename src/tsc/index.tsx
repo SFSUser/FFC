@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserHistory } from 'history';
+//import { createBrowserHistory } from 'history';
 import ReactDOM from 'react-dom';
 import styles from './../scss/index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';

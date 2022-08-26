@@ -1,10 +1,11 @@
+import { withRouter } from "next/router";
 import React from "react";
-import { RouteComponentProps, withRouter } from "react-router";
+//import { RouteComponentProps, withRouter } from "react-router";
 
 import ReactGA from 'react-ga4';
 ReactGA.initialize('G-YXN2QGTHRM');
 
-export class GaPage extends React.Component<RouteComponentProps> {
+export class GaPage extends React.Component<any> {
     private ga(){
         var route = window.location.pathname + window.location.search;
         ReactGA.pageview(route);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+//import { withRouter } from 'react-router-dom';
 import { Row, Col, Card, InputGroup, FormControl } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
@@ -7,6 +7,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Wave from 'react-wavify';
 import { TERTULIAS, TERTULIA_DEFAULT } from '../constant/tertulias';
 import * as I from 'react-feather';
+import { withRouter } from 'next/router';
 
 class TertuliaPage extends Component<any, any> {
     
@@ -20,11 +21,11 @@ class TertuliaPage extends Component<any, any> {
         }
     }
 
-    toMin(text) {
+    toMin(text: string) {
         return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     }
 
-    checkCriteria(t){
+    checkCriteria(t: any){
         let me = this;
         let criteria = me.state?.criteria ?? "";
         if(!(criteria.length > 0)){
@@ -109,8 +110,8 @@ class TertuliaPage extends Component<any, any> {
                     </div>
                     <div className="box-fixer mt-5">
                         <Row className="justify-content-center">
-                            {TERTULIAS.filter( t => me.checkCriteria(t)).map( t => 
-                                <Col md="3" sm="12">
+                            {TERTULIAS.filter( t => me.checkCriteria(t)).map( (t, i: number) => 
+                                <Col key={i} md="3" sm="12">
                                     <Card className="mb-2 tertulia-info">
                                         <div className="header">
                                             <h3 className="text-golden">{t.titulo}</h3>

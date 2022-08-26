@@ -1,5 +1,3 @@
-import { IProp } from "tsc/core/IProp";
-
-export default class CategoryBoxProp implements IProp {
+export default class CategoryBoxProp  {
     public data: any = "";
 }
