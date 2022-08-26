@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Card, InputGroup, FormControl } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import PageHeader from '../component/nav/PageHeader';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Wave from 'react-wavify';
+import { TERTULIAS, TERTULIA_DEFAULT } from '../constant/tertulias';
+import * as I from 'react-feather';
 
 class TertuliaPage extends Component<any, any> {
     
     componentDidMount(): void {
         let { meet } = this.props.match.params;
-
+        
         if(meet){
             this.setState({
                 meet
             });
         }
+    }
+
+    toMin(text) {
+        return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    }
+
+    checkCriteria(t){
+        let me = this;
+        let criteria = me.state?.criteria ?? "";
+        if(!(criteria.length > 0)){
+            return true;
+        } 
+        let content = t.titulo + (t.descripcion??"");
+        content = me.toMin(content);
+        criteria = me.toMin(criteria);
+        console.log("data", content, criteria);
+        return content.includes(criteria);
     }
 
     render (){
@@ -30,24 +50,26 @@ class TertuliaPage extends Component<any, any> {
                 </div>
                 <div className="box box-golden text-white">
                     <div className="box-fixer">
-                        <Row>
-                            <Col sm="12" md="8">
-                                <h2>Para ver la proxima terculia, ingresa a:</h2>
-                                <p>
-                                    Recuerda que las tertulias son los lunes a las 6 pm.
-                                </p>
-                            </Col>
-                            <Col sm="12" md="4">
-                                <div>
-                                    {this.state?.meet &&
-                                        <a style={{fontSize: 40}} target='_blank' className="btn btn-success" href={"https://meet.google.com/" + me.state}>
-                                            <img src="https://i.imgur.com/rtDFsts.png" height={60}/> Ir al encuentro
-                                        </a>
-                                    }
-                                </div>
-                            </Col>
-                        </Row>
-                        <hr/>
+                        {this.state?.meet &&
+                            <>
+                                <Row>
+                                    <Col sm="12" md="8">
+                                        <h2>Para ver la próxima tertulia, ingresa a:</h2>
+                                        <p>
+                                            Recuerda que las tertulias son los lunes a las 6 pm.
+                                        </p>
+                                    </Col>
+                                    <Col sm="12" md="4">
+                                        <div>
+                                            <a style={{fontSize: 40}} target='_blank' className="btn btn-success" href={"https://meet.google.com/" + me.state.meet}>
+                                                <img src="https://i.imgur.com/rtDFsts.png" height={60}/> Ir al encuentro
+                                            </a>
+                                        </div>
+                                    </Col>
+                                </Row>
+                                <hr/>
+                            </>
+                        }
                         <Row>
                             <Col sm="12" md="4">
                                 <h1 className="title-white">Reseña de las tertulias</h1>
@@ -55,15 +77,55 @@ class TertuliaPage extends Component<any, any> {
                             <Col sm="12" md="8">
                                 <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
                                     <p>
-                                        Do quis proident exercitation voluptate aliqua nostrud ea mollit occaecat veniam eu ea nisi est. Ut labore anim pariatur anim enim proident sit ex deserunt est. Ex consectetur enim consequat et enim cupidatat aliquip qui exercitation incididunt sint. Quis sit consequat duis reprehenderit id culpa duis.                                    
+                                        La <b>TERTULIA</b>, es un espacio de encuentro que se ha dado la Familia  Franciscana de Colombia  para Conversar, tejer, caminar la palabra cada <b>lunes de 6pm a 8pm</b>.
                                     </p>
                                     <p>
-                                        Ea magna eu commodo ullamco. Anim dolore adipisicing labore consequat in commodo excepteur fugiat aute cillum ea reprehenderit. Voluptate elit velit sint qui do ipsum magna ut laboris tempor proident enim tempor. Est velit nostrud proident irure velit nulla esse nulla elit sint dolore ipsum. Elit ut irure commodo id laboris minim do cupidatat id exercitation aliqua est esse fugiat.
+                                        Es un espacio en el que se proponen temas de interés fraterno y sororal, temas que provocan la comunicación y que se mezclan con canciones, poesía y oración. 
                                     </p>
                                 </ScrollAnimation>
                             </Col>
                         </Row>
                     </div>
+                </div>
+                <div className="box-white">
+                    <Wave
+                        className="wave-golden wave-down"
+                        paused={false}
+                        options={{
+                            height: 20,
+                            amplitude: 60,
+                            speed: 0.15,
+                            points: 2
+                        }}
+                    />
+                    <div className="box-spacer-1 text-golden">
+                        <h1>Últimas tertulias</h1>
+                        <InputGroup className="mb-3 tertulia-input">
+                            <FormControl
+                                placeholder="Buscar tertulia..."
+                                onChange={e => me.setState({criteria: e.target.value})}
+                                />
+                        </InputGroup>
+                    </div>
+                    <div className="box-fixer mt-5">
+                        <Row className="justify-content-center">
+                            {TERTULIAS.filter( t => me.checkCriteria(t)).map( t => 
+                                <Col md="3" sm="12">
+                                    <Card className="mb-2 tertulia-info">
+                                        <div className="header">
+                                            <h3 className="text-golden">{t.titulo}</h3>
+                                        </div>
+                                        <img src={t.imagen?.length > 0 ? t.imagen : TERTULIA_DEFAULT.imagen} />
+                                        <span>{t.descripcion}</span>
+                                        <a target="_blank" href={"https://www.facebook.com/watch/live/?ref=watch_permalink&v=" + t.video}>
+                                            <I.Facebook/> Ver grabación
+                                        </a>
+                                    </Card>
+                                </Col>
+                            )}
+                        </Row>
+                    </div> 
+                    <div className="box-spacer-1"></div>
                 </div>
             </>
         );

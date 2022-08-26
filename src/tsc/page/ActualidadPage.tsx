@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 import { GET_GROUP } from '../constant/hermanos';
 import { WEB_TITLE_SMALL } from '../constant/common';
@@ -8,11 +7,12 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { ACTUALIDAD, ACTUALIDAD_CATEGORIAS } from '../constant/actualidad';
 import * as I from 'react-feather';
 import { Helmet } from 'react-helmet';
+import { withRouter } from 'next/router';
 
 class ActualidadPage extends Component<any,any> {
 
     componentDidMount(): void {
-        let { articulo } = this.props.match.params;
+        let { articulo } = this.props.match?.params ?? {};
         let id = parseInt(articulo);
 
         if(id > 0){
@@ -33,7 +33,7 @@ class ActualidadPage extends Component<any,any> {
         this.setState({ article });
     }
 
-    getArticle(article, height = 500){
+    getArticle(article: any, height = 500){
         let me = this;
         return (
             <div>
@@ -44,9 +44,9 @@ class ActualidadPage extends Component<any,any> {
     
     render (){
         let me = this;
-        let actualidad = ACTUALIDAD.filter( doc => doc.category == me.state?.category || ["todos", undefined].includes(me.state?.category));
+        let actualidad = ACTUALIDAD.filter( (doc: any) => doc.category == me.state?.category || ["todos", undefined].includes(me.state?.category));
         actualidad = actualidad.reverse();
-        let currentArticle = actualidad.find( doc => doc.id == me.state?.article_id);
+        let currentArticle = actualidad.find( (doc: any) => doc.id == me.state?.article_id);
         return (
             <>
                 <div className="textcenter">
@@ -101,7 +101,7 @@ class ActualidadPage extends Component<any,any> {
                                     <h3>No hay artículos para la categoría "{ACTUALIDAD_CATEGORIAS[me.state.category]?.nombre ?? "Todos"}"</h3>
                                 </div>
                             }
-                            {actualidad.map((item, index) =>
+                            {actualidad.map((item: any, index: number) =>
                                 <div key={index}>
                                     <Card>
                                         <ScrollAnimation duration={3} animateIn="animate__animated animate__fadeIn">
@@ -128,6 +128,9 @@ class ActualidadPage extends Component<any,any> {
                                                                 </>
                                                             }
                                                         </Button>
+                                                        <a className="btn btn-sm btn-info ml-3" href={"/actualidad/" + item.id}>
+                                                            <I.Link size={15}/> Ver enlace
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </Card.Body>

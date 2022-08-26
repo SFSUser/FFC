@@ -1,16 +1,23 @@
 import { Component } from "react";
-import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
+//import { Link, RouteComponentProps, withRouter } from 'react-dom';
 import React from 'react';
 import * as I from 'react-feather';
 import FFC from  '../../../assets/img/ffc.png';
 import { COMUNIDADES, HomeCategory } from "../constant/common";
 import Marquee from "react-fast-marquee";
+import Image from "next/image";
+import Link from "next/link";
+import { withRouter } from "next/router";
+import General from "../help/general";
 
-export class HomePage extends Component<RouteComponentProps, { innerWidth: string, category: any}> {
+//console.log(styles);
+
+export class HomePage extends Component<any, { innerWidth: string, category: any}> {
     constructor(props: any){
         super(props);
+        
         this.state = {
-            innerWidth: window.innerHeight + "px",
+            innerWidth: (General.isServer ? 500 : window.innerHeight) + "px",
             category: null,
         };
     }
@@ -25,7 +32,11 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                 innerWidth 
             });
         }
-        window.onresize = me.resizeEvent;
+        if(!General.isServer) {
+            window.onresize = me.resizeEvent;
+        } else {
+            me.resizeEvent();
+        }
     }
 
     private setCategory(category: any){
@@ -62,9 +73,9 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                             {c.title}
                         </h2>
                         {c.sections.map( (s: any, i) => 
-                            <Link key={i} to={s.url}>
+                            <a key={i} href={s.url}>
                                 {!s.ready && <I.AlertTriangle/>} {s.name} 
-                            </Link>
+                            </a>
                         )}
                     </div>
                 }
@@ -84,7 +95,7 @@ export class HomePage extends Component<RouteComponentProps, { innerWidth: strin
                     <div className="home-bar-middle">
                         <div>
                             <div className="text-center">
-                                <img className="animate__animated animate__zoomIn animate__slow" src={FFC} />
+                                <img className="animate__animated animate__zoomIn animate__slow" src="/ffc.png" />
                             </div>
                             <h1 className="animate__animated  animate__fadeIn animate__delay-1s">Familia Franciscana de Colombia</h1>
                         </div>

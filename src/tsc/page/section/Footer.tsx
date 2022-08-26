@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import React, { Component } from 'react';
 import * as Icon from 'react-feather';
-import { Link } from 'react-router-dom';
 import { HomeCategory } from '../../constant/common';
 
 export default class Footer extends Component {
@@ -10,9 +10,9 @@ export default class Footer extends Component {
                 
                 <div className="footer-bar-sections">
                     {HomeCategory.map( (c, i) => 
-                        <Link key={i} to={c.url} className="footer-bar-section">
+                        <a key={i} href={c.url} className="footer-bar-section">
                             {c.title}
-                        </Link>
+                        </a>
                     )}
                 </div>
                 

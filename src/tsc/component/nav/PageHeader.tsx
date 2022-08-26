@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+ import React, { Component } from 'react';
+//import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import FFC from  '../../../../assets/img/ffc.png';
 import * as I from 'react-feather';
@@ -25,7 +25,8 @@ export default class PageHeader extends Component<{title: string, category: stri
     render() {
         let me = this;
         let sections = me.Sections;
-        let current_section = sections.filter( s => s.url == location.pathname)[0];
+        const locationT = (typeof location == "undefined") ? {pathname:""} : location;
+        let current_section = sections.filter( s => s.url == locationT.pathname)[0];
         
         return (
             <>
@@ -37,30 +38,30 @@ export default class PageHeader extends Component<{title: string, category: stri
                 </div>
                 <div className="header-bar-sections desktop animate__animated animate__fadeIn animate__slow">
                     {HomeCategory.map( (c, i) => 
-                        <Link key={i} to={c.url} className="header-bar-section">
+                        <a key={i} href={c.url} className="header-bar-section">
                             {c.title}
-                        </Link>
+                        </a>
                     )}
                 </div>
                 <div className="page-header animate__animated animate__fadeIn">
                     <div className="main-title animate__animated animate__slideInDown">
                         <div>
-                            <img className="animate__animated animate__zoomIn animate__slow" src={FFC} />
+                            <img className="animate__animated animate__zoomIn animate__slow" src="/ffc.png" />
 
                             <h1 className="animate__animated animate__fadeIn animate__slow">{me.props.title}</h1>
 
-                            <Link className="mt-0 ml-2" to="/">
+                            <a className="mt-0 ml-2" href="/">
                                 <Button variant="danger" className="animate__animated animate__fadeIn animate__slow">
                                     <I.ArrowLeft/> Volver
                                 </Button>
-                            </Link> 
+                            </a> 
                         </div>
                         {sections.length > 1 && 
                             <div className="header-category-sections animate__animated animate__fadeIn animate__delay-1s">
                                 {sections.map( (s: any, i: number) => 
-                                    <Link key={i} to={s.url} className={`header-category-section ${s == current_section ? 'header-category-section--active' : ''}`}>
+                                    <a key={i} href={s.url} className={`header-category-section ${s == current_section ? 'header-category-section--active' : ''}`}>
                                         {s.shortname ?? s.name}
-                                    </Link>
+                                    </a>
                                 )}
                             </div>
                         }

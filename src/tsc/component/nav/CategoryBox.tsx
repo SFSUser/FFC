@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import CategoryBoxProp from 'tsc/entity/nav/props/CategoryBoxProp';
+//import { Link } from 'react-router-dom';
+//import CategoryBoxProp from 'tsc/entity/nav/props/CategoryBoxProp';
 import $ from "jquery";
 
-export default class CategoryBox extends Component<CategoryBoxProp> {
+export default class CategoryBox extends Component<any> {
     private image: any = null;
     constructor(props: any){
         super(props);
@@ -27,7 +27,7 @@ export default class CategoryBox extends Component<CategoryBoxProp> {
             <div className={`card category`}>
                 <h4>{me.props.data.title}</h4>
                 {me.props.data.sections.map( (s: any, i: any) => {
-                    return <Link key={i} to={s.url}>{s.name}</Link>;
+                    return <a key={i} href={s.url}>{s.name}</a>;
                 })}
                 <div ref={me.image} className={`image image__${me.props.data.image}`}></div>
             </div>

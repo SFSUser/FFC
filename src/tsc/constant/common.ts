@@ -97,7 +97,7 @@ export const HomeCategory = [
             { url: '/migrantes', name: 'Red Franciscana para Migrantes', ready: true},
             { url: '/build', name: 'Red de Parejas Franciscanas' },
             { url: '/build', name: 'Red de Jóvenes Franciscanos' },
-            { url: '/build', name: 'Nuevos Estilos de Vida - Eremitorios' }
+            { url: '/eremitorios', name: 'Nuevos Estilos de Vida - Eremitorios', ready: true }
         ]
     },
     { 
@@ -108,7 +108,7 @@ export const HomeCategory = [
         url: '/escuela',
         sections: [
             { url: '/escuela', name: 'Escuela de Pensamiento y Formación Francisclariana ', shortname: "Escuela de Pensamiento", ready: true },
-            { url: '/tertulia', name: 'Tertulias'},
+            { url: '/tertulia', name: 'Tertulias', ready: true},
             { url: '/build', name: 'Otros servicios'},
         ]
     },
